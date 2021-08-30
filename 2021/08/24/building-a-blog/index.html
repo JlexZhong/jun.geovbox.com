@@ -29,7 +29,9 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="钟军的小黑板" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="钟军的小黑板" type="application/atom+xml">
 </head>
 
 
@@ -494,7 +496,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-08-24
+                    2021-08-30
                 </div>
                 
 
@@ -648,7 +650,7 @@ hexo d //部署<span aria-hidden="true" class="line-numbers-rows"><span></span><
 <li><p>出现<strong>bug</strong>：</p>
 <p> 解决：</p>
 <ul>
-<li><p>如果不是代理问题，在_config.yml文件中把repo：后的地址改为<a href="mailto:&#103;&#105;&#116;&#64;&#x67;&#x69;&#116;&#x68;&#117;&#x62;&#46;&#99;&#111;&#109;">&#103;&#105;&#116;&#64;&#x67;&#x69;&#116;&#x68;&#117;&#x62;&#46;&#99;&#111;&#109;</a>:JlexZhong/JlexZhong.github.io.git</p>
+<li><p>如果不是代理问题，在_config.yml文件中把repo：后的地址改为<a href="mailto:git@github.com">git@github.com</a>:JlexZhong/JlexZhong.github.io.git</p>
 </li>
 <li><p>是代理问题，清除代理</p>
 </li>
@@ -657,15 +659,15 @@ hexo d //部署<span aria-hidden="true" class="line-numbers-rows"><span></span><
 </ol>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">remote: Permission to JlexZhong/JlexZhong.github.io.git denied to junz2001.
 fatal: unable to access <span class="token string">'https://github.com/JlexZhong/JlexZhong.github.io.git/'</span><span class="token builtin class-name">:</span> The requested URL returned error: <span class="token number">403</span>
-<span class="token punctuation">[</span>41mFATAL<span class="token punctuation">[</span>49m <span class="token punctuation">&#123;</span>
+<span class="token punctuation">[</span>41mFATAL<span class="token punctuation">[</span>49m <span class="token punctuation">{</span>
 err: Error: Spawn failed
-at ChildProcess.<span class="token operator">&lt;</span>anonymous<span class="token operator">></span> <span class="token punctuation">(</span>E:<span class="token punctuation">\</span>Blog<span class="token punctuation">\</span>node_modules<span class="token punctuation">\</span>hexo-util<span class="token punctuation">\</span>lib<span class="token punctuation">\</span>spawn.js:51:21<span class="token punctuation">)</span>
+at ChildProcess.<span class="token operator">&lt;</span>anonymous<span class="token operator">&gt;</span> <span class="token punctuation">(</span>E:<span class="token punctuation">\</span>Blog<span class="token punctuation">\</span>node_modules<span class="token punctuation">\</span>hexo-util<span class="token punctuation">\</span>lib<span class="token punctuation">\</span>spawn.js:51:21<span class="token punctuation">)</span>
 at ChildProcess.emit <span class="token punctuation">(</span>events.js:400:28<span class="token punctuation">)</span>
 at ChildProcess.cp.emit <span class="token punctuation">(</span>E:<span class="token punctuation">\</span>Blog<span class="token punctuation">\</span>node_modules<span class="token punctuation">\</span>cross-spawn<span class="token punctuation">\</span>lib<span class="token punctuation">\</span>enoent.js:34:29<span class="token punctuation">)</span>
-at Process.ChildProcess._handle.onexit <span class="token punctuation">(</span>internal/child_process.js:277:12<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+at Process.ChildProcess._handle.onexit <span class="token punctuation">(</span>internal/child_process.js:277:12<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 code: <span class="token number">128</span>
-<span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span> Something's wrong. Maybe you can <span class="token function">find</span> the solution here: %s <span class="token punctuation">[</span>4mhttps://hexo.io/docs/troubleshooting.html<span class="token punctuation">[</span>24m<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span>
+<span class="token punctuation">}</span> Something's wrong. Maybe you can <span class="token function">find</span> the solution here: %s <span class="token punctuation">[</span>4mhttps://hexo.io/docs/troubleshooting.html<span class="token punctuation">[</span>24m<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ol start="5">
 <li><p>此时博客已经上线啦！可以通过网络访问了。浏览器输入博客网站地址<strong>xxxx.github.io</strong></p>
@@ -678,7 +680,7 @@ code: <span class="token number">128</span>
 </li>
 </ol>
 <h3 id="发布博客："><a href="#发布博客：" class="headerlink" title="发布博客："></a>发布博客：</h3><ul>
-<li>先<code>hexo new post &quot;article title&quot;</code>新建一篇文章，</li>
+<li>先<code>hexo new post "article title"</code>新建一篇文章，</li>
 <li>在博客文件夹，<code>Blog/source/_posts</code>目录下回多出一个Markdown文件，编写完markdown文件后，保存</li>
 <li>根目录下输入<code>hexo g</code>生成静态网页</li>
 <li>然后输入<code>hexo s</code>可以本地预览效果</li>
