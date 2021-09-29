@@ -3,11 +3,11 @@
   <title>Jlex の Blog</title>
   
   <subtitle>书山有路勤为径，学海无涯苦作舟</subtitle>
-  <link href="https://github.com/JlexZhong/jun.geovbox.com.git/atom.xml" rel="self"/>
+  <link href="https://jun.geovbox.com/atom.xml" rel="self"/>
   
-  <link href="https://github.com/JlexZhong/jun.geovbox.com.git/"/>
+  <link href="https://jun.geovbox.com/"/>
   <updated>2021-09-29T16:18:30.310Z</updated>
-  <id>https://github.com/JlexZhong/jun.geovbox.com.git/</id>
+  <id>https://jun.geovbox.com/</id>
   
   <author>
     <name>钟军</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>(Mask R-CNN) AssertionError when I run inspect_model.py in run_graph()</title>
-    <link href="https://github.com/JlexZhong/jun.geovbox.com.git/2021/09/17/(Mask-R-CNN)-AssertionError-in%20run_graph()/"/>
-    <id>https://github.com/JlexZhong/jun.geovbox.com.git/2021/09/17/(Mask-R-CNN)-AssertionError-in%20run_graph()/</id>
+    <link href="https://jun.geovbox.com/2021/09/17/(Mask-R-CNN)-AssertionError-in%20run_graph()/"/>
+    <id>https://jun.geovbox.com/2021/09/17/(Mask-R-CNN)-AssertionError-in%20run_graph()/</id>
     <published>2021-09-17T10:00:09.000Z</published>
     <updated>2021-09-29T16:18:30.310Z</updated>
     
@@ -30,23 +30,23 @@
     
     
     
-    <category term="BUG" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/categories/BUG/"/>
+    <category term="BUG" scheme="https://jun.geovbox.com/categories/BUG/"/>
     
     
-    <category term="深度学习" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    <category term="深度学习" scheme="https://jun.geovbox.com/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
     
-    <category term="tensorflow" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/tags/tensorflow/"/>
+    <category term="tensorflow" scheme="https://jun.geovbox.com/tags/tensorflow/"/>
     
-    <category term="keras" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/tags/keras/"/>
+    <category term="keras" scheme="https://jun.geovbox.com/tags/keras/"/>
     
-    <category term="Mask R-CNN" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/tags/Mask-R-CNN/"/>
+    <category term="Mask R-CNN" scheme="https://jun.geovbox.com/tags/Mask-R-CNN/"/>
     
   </entry>
   
   <entry>
     <title>解决tensorboard 1.13.1 无法打开生成的网址</title>
-    <link href="https://github.com/JlexZhong/jun.geovbox.com.git/2021/09/11/solve-tensorboard-1.13.1-cannot-open-url/"/>
-    <id>https://github.com/JlexZhong/jun.geovbox.com.git/2021/09/11/solve-tensorboard-1.13.1-cannot-open-url/</id>
+    <link href="https://jun.geovbox.com/2021/09/11/solve-tensorboard-1.13.1-cannot-open-url/"/>
+    <id>https://jun.geovbox.com/2021/09/11/solve-tensorboard-1.13.1-cannot-open-url/</id>
     <published>2021-09-11T14:00:09.000Z</published>
     <updated>2021-09-14T02:21:58.442Z</updated>
     
@@ -57,23 +57,23 @@
     
     
     
-    <category term="tensorflow" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/categories/tensorflow/"/>
+    <category term="tensorflow" scheme="https://jun.geovbox.com/categories/tensorflow/"/>
     
     
-    <category term="深度学习" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    <category term="深度学习" scheme="https://jun.geovbox.com/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
     
-    <category term="tensorflow" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/tags/tensorflow/"/>
+    <category term="tensorflow" scheme="https://jun.geovbox.com/tags/tensorflow/"/>
     
-    <category term="keras" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/tags/keras/"/>
+    <category term="keras" scheme="https://jun.geovbox.com/tags/keras/"/>
     
-    <category term="BUG" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/tags/BUG/"/>
+    <category term="BUG" scheme="https://jun.geovbox.com/tags/BUG/"/>
     
   </entry>
   
   <entry>
     <title>python开发中遇到的原生问题</title>
-    <link href="https://github.com/JlexZhong/jun.geovbox.com.git/2021/09/11/python_BUG/"/>
-    <id>https://github.com/JlexZhong/jun.geovbox.com.git/2021/09/11/python_BUG/</id>
+    <link href="https://jun.geovbox.com/2021/09/11/python_BUG/"/>
+    <id>https://jun.geovbox.com/2021/09/11/python_BUG/</id>
     <published>2021-09-11T04:00:09.000Z</published>
     <updated>2021-09-14T02:25:18.704Z</updated>
     
@@ -84,19 +84,19 @@
     
     
     
-    <category term="Python" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/categories/Python/"/>
+    <category term="Python" scheme="https://jun.geovbox.com/categories/Python/"/>
     
     
-    <category term="Python" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/tags/Python/"/>
+    <category term="BUG" scheme="https://jun.geovbox.com/tags/BUG/"/>
     
-    <category term="BUG" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/tags/BUG/"/>
+    <category term="Python" scheme="https://jun.geovbox.com/tags/Python/"/>
     
   </entry>
   
   <entry>
     <title>mask r-cnn 遇到的坑</title>
-    <link href="https://github.com/JlexZhong/jun.geovbox.com.git/2021/09/09/mask_rcnn-bug-note/"/>
-    <id>https://github.com/JlexZhong/jun.geovbox.com.git/2021/09/09/mask_rcnn-bug-note/</id>
+    <link href="https://jun.geovbox.com/2021/09/09/mask_rcnn-bug-note/"/>
+    <id>https://jun.geovbox.com/2021/09/09/mask_rcnn-bug-note/</id>
     <published>2021-09-09T04:00:09.000Z</published>
     <updated>2021-09-14T02:18:36.664Z</updated>
     
@@ -107,25 +107,25 @@
     
     
     
-    <category term="Mask R-CNN" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/categories/Mask-R-CNN/"/>
+    <category term="Mask R-CNN" scheme="https://jun.geovbox.com/categories/Mask-R-CNN/"/>
     
     
-    <category term="深度学习" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    <category term="深度学习" scheme="https://jun.geovbox.com/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
     
-    <category term="tensorflow" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/tags/tensorflow/"/>
+    <category term="tensorflow" scheme="https://jun.geovbox.com/tags/tensorflow/"/>
     
-    <category term="keras" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/tags/keras/"/>
+    <category term="keras" scheme="https://jun.geovbox.com/tags/keras/"/>
     
-    <category term="Mask R-CNN" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/tags/Mask-R-CNN/"/>
+    <category term="Mask R-CNN" scheme="https://jun.geovbox.com/tags/Mask-R-CNN/"/>
     
-    <category term="实例分割" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/tags/%E5%AE%9E%E4%BE%8B%E5%88%86%E5%89%B2/"/>
+    <category term="实例分割" scheme="https://jun.geovbox.com/tags/%E5%AE%9E%E4%BE%8B%E5%88%86%E5%89%B2/"/>
     
   </entry>
   
   <entry>
     <title>使用Mask-R-CNN训练自己的数据集</title>
-    <link href="https://github.com/JlexZhong/jun.geovbox.com.git/2021/09/09/use-Mask-R-CNN-train-dataset-myself/"/>
-    <id>https://github.com/JlexZhong/jun.geovbox.com.git/2021/09/09/use-Mask-R-CNN-train-dataset-myself/</id>
+    <link href="https://jun.geovbox.com/2021/09/09/use-Mask-R-CNN-train-dataset-myself/"/>
+    <id>https://jun.geovbox.com/2021/09/09/use-Mask-R-CNN-train-dataset-myself/</id>
     <published>2021-09-09T04:00:09.000Z</published>
     <updated>2021-09-14T02:22:43.807Z</updated>
     
@@ -136,25 +136,25 @@
     
     
     
-    <category term="Mask R-CNN" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/categories/Mask-R-CNN/"/>
+    <category term="Mask R-CNN" scheme="https://jun.geovbox.com/categories/Mask-R-CNN/"/>
     
     
-    <category term="深度学习" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    <category term="深度学习" scheme="https://jun.geovbox.com/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
     
-    <category term="tensorflow" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/tags/tensorflow/"/>
+    <category term="tensorflow" scheme="https://jun.geovbox.com/tags/tensorflow/"/>
     
-    <category term="keras" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/tags/keras/"/>
+    <category term="keras" scheme="https://jun.geovbox.com/tags/keras/"/>
     
-    <category term="Mask R-CNN" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/tags/Mask-R-CNN/"/>
+    <category term="Mask R-CNN" scheme="https://jun.geovbox.com/tags/Mask-R-CNN/"/>
     
-    <category term="实例分割" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/tags/%E5%AE%9E%E4%BE%8B%E5%88%86%E5%89%B2/"/>
+    <category term="实例分割" scheme="https://jun.geovbox.com/tags/%E5%AE%9E%E4%BE%8B%E5%88%86%E5%89%B2/"/>
     
   </entry>
   
   <entry>
     <title>tensorflow.js部署到web 笔记</title>
-    <link href="https://github.com/JlexZhong/jun.geovbox.com.git/2021/09/02/tensorflow.js-deploy-web/"/>
-    <id>https://github.com/JlexZhong/jun.geovbox.com.git/2021/09/02/tensorflow.js-deploy-web/</id>
+    <link href="https://jun.geovbox.com/2021/09/02/tensorflow.js-deploy-web/"/>
+    <id>https://jun.geovbox.com/2021/09/02/tensorflow.js-deploy-web/</id>
     <published>2021-09-02T04:00:09.000Z</published>
     <updated>2021-09-14T02:22:09.708Z</updated>
     
@@ -165,21 +165,21 @@
     
     
     
-    <category term="tensorflow" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/categories/tensorflow/"/>
+    <category term="tensorflow" scheme="https://jun.geovbox.com/categories/tensorflow/"/>
     
     
-    <category term="深度学习" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    <category term="深度学习" scheme="https://jun.geovbox.com/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
     
-    <category term="tensorflow" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/tags/tensorflow/"/>
+    <category term="tensorflow" scheme="https://jun.geovbox.com/tags/tensorflow/"/>
     
-    <category term="tensorflow.js" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/tags/tensorflow-js/"/>
+    <category term="tensorflow.js" scheme="https://jun.geovbox.com/tags/tensorflow-js/"/>
     
   </entry>
   
   <entry>
     <title>基于InceptionV3深度学习实现岩石图像智能识别与分类</title>
-    <link href="https://github.com/JlexZhong/jun.geovbox.com.git/2021/09/01/by-InceptionV3-transfer-learning/"/>
-    <id>https://github.com/JlexZhong/jun.geovbox.com.git/2021/09/01/by-InceptionV3-transfer-learning/</id>
+    <link href="https://jun.geovbox.com/2021/09/01/by-InceptionV3-transfer-learning/"/>
+    <id>https://jun.geovbox.com/2021/09/01/by-InceptionV3-transfer-learning/</id>
     <published>2021-09-01T10:00:09.000Z</published>
     <updated>2021-09-29T16:17:12.219Z</updated>
     
@@ -190,23 +190,23 @@
     
     
     
-    <category term="图像分类" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/categories/%E5%9B%BE%E5%83%8F%E5%88%86%E7%B1%BB/"/>
+    <category term="图像分类" scheme="https://jun.geovbox.com/categories/%E5%9B%BE%E5%83%8F%E5%88%86%E7%B1%BB/"/>
     
     
-    <category term="深度学习" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    <category term="深度学习" scheme="https://jun.geovbox.com/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
     
-    <category term="tensorflow" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/tags/tensorflow/"/>
+    <category term="tensorflow" scheme="https://jun.geovbox.com/tags/tensorflow/"/>
     
-    <category term="keras" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/tags/keras/"/>
+    <category term="keras" scheme="https://jun.geovbox.com/tags/keras/"/>
     
-    <category term="图像分类" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/tags/%E5%9B%BE%E5%83%8F%E5%88%86%E7%B1%BB/"/>
+    <category term="图像分类" scheme="https://jun.geovbox.com/tags/%E5%9B%BE%E5%83%8F%E5%88%86%E7%B1%BB/"/>
     
   </entry>
   
   <entry>
     <title>Python批量删除含有指定字符的文件或文件夹</title>
-    <link href="https://github.com/JlexZhong/jun.geovbox.com.git/2021/08/30/Python-batch-delet-files/"/>
-    <id>https://github.com/JlexZhong/jun.geovbox.com.git/2021/08/30/Python-batch-delet-files/</id>
+    <link href="https://jun.geovbox.com/2021/08/30/Python-batch-delet-files/"/>
+    <id>https://jun.geovbox.com/2021/08/30/Python-batch-delet-files/</id>
     <published>2021-08-30T15:18:38.000Z</published>
     <updated>2021-09-14T02:21:39.734Z</updated>
     
@@ -220,19 +220,19 @@
     
     
     
-    <category term="python" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/categories/python/"/>
+    <category term="python" scheme="https://jun.geovbox.com/categories/python/"/>
     
     
-    <category term="python" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/tags/python/"/>
+    <category term="python" scheme="https://jun.geovbox.com/tags/python/"/>
     
-    <category term="算法" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/tags/%E7%AE%97%E6%B3%95/"/>
+    <category term="算法" scheme="https://jun.geovbox.com/tags/%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
   <entry>
     <title>pyqt5小记| QSS开源暗黑主题qdarkstyle ，读取QSS主题文件</title>
-    <link href="https://github.com/JlexZhong/jun.geovbox.com.git/2021/08/30/pyqt5-QSS-qdarkstyle/"/>
-    <id>https://github.com/JlexZhong/jun.geovbox.com.git/2021/08/30/pyqt5-QSS-qdarkstyle/</id>
+    <link href="https://jun.geovbox.com/2021/08/30/pyqt5-QSS-qdarkstyle/"/>
+    <id>https://jun.geovbox.com/2021/08/30/pyqt5-QSS-qdarkstyle/</id>
     <published>2021-08-30T15:17:11.000Z</published>
     <updated>2021-09-14T02:21:10.521Z</updated>
     
@@ -247,16 +247,16 @@
     
     
     
-    <category term="PyQt" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/tags/PyQt/"/>
+    <category term="PyQt" scheme="https://jun.geovbox.com/tags/PyQt/"/>
     
-    <category term="GUI" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/tags/GUI/"/>
+    <category term="GUI" scheme="https://jun.geovbox.com/tags/GUI/"/>
     
   </entry>
   
   <entry>
     <title>pyqt5 setWindowTitle 设置窗口标题失效解决办法</title>
-    <link href="https://github.com/JlexZhong/jun.geovbox.com.git/2021/08/30/pyqt5-setWindowTitle/"/>
-    <id>https://github.com/JlexZhong/jun.geovbox.com.git/2021/08/30/pyqt5-setWindowTitle/</id>
+    <link href="https://jun.geovbox.com/2021/08/30/pyqt5-setWindowTitle/"/>
+    <id>https://jun.geovbox.com/2021/08/30/pyqt5-setWindowTitle/</id>
     <published>2021-08-30T15:16:45.000Z</published>
     <updated>2021-09-14T02:21:23.464Z</updated>
     
@@ -270,19 +270,19 @@
     
     
     
-    <category term="PyQt" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/categories/PyQt/"/>
+    <category term="PyQt" scheme="https://jun.geovbox.com/categories/PyQt/"/>
     
     
-    <category term="PyQt" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/tags/PyQt/"/>
+    <category term="PyQt" scheme="https://jun.geovbox.com/tags/PyQt/"/>
     
-    <category term="GUI" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/tags/GUI/"/>
+    <category term="GUI" scheme="https://jun.geovbox.com/tags/GUI/"/>
     
   </entry>
   
   <entry>
     <title>pyqtgraph嵌入pyqt界面中 | 修改pyqtgraph背景颜色 | 坐标轴等比例缩放</title>
-    <link href="https://github.com/JlexZhong/jun.geovbox.com.git/2021/08/30/pyqtgraph-to-pyqt-background-axes-square/"/>
-    <id>https://github.com/JlexZhong/jun.geovbox.com.git/2021/08/30/pyqtgraph-to-pyqt-background-axes-square/</id>
+    <link href="https://jun.geovbox.com/2021/08/30/pyqtgraph-to-pyqt-background-axes-square/"/>
+    <id>https://jun.geovbox.com/2021/08/30/pyqtgraph-to-pyqt-background-axes-square/</id>
     <published>2021-08-30T15:16:16.000Z</published>
     <updated>2021-09-14T02:18:22.937Z</updated>
     
@@ -296,21 +296,21 @@
     
     
     
-    <category term="PyQt" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/categories/PyQt/"/>
+    <category term="PyQt" scheme="https://jun.geovbox.com/categories/PyQt/"/>
     
     
-    <category term="PyQt" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/tags/PyQt/"/>
+    <category term="PyQt" scheme="https://jun.geovbox.com/tags/PyQt/"/>
     
-    <category term="GUI" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/tags/GUI/"/>
+    <category term="GUI" scheme="https://jun.geovbox.com/tags/GUI/"/>
     
-    <category term="pyqtgraph" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/tags/pyqtgraph/"/>
+    <category term="pyqtgraph" scheme="https://jun.geovbox.com/tags/pyqtgraph/"/>
     
   </entry>
   
   <entry>
     <title>pyqt小记|侧边栏（QListWidget+QStackedWidget）实现</title>
-    <link href="https://github.com/JlexZhong/jun.geovbox.com.git/2021/08/30/pyqt-listbar-QListWidget+QStackedWidget/"/>
-    <id>https://github.com/JlexZhong/jun.geovbox.com.git/2021/08/30/pyqt-listbar-QListWidget+QStackedWidget/</id>
+    <link href="https://jun.geovbox.com/2021/08/30/pyqt-listbar-QListWidget+QStackedWidget/"/>
+    <id>https://jun.geovbox.com/2021/08/30/pyqt-listbar-QListWidget+QStackedWidget/</id>
     <published>2021-08-30T15:13:54.000Z</published>
     <updated>2021-09-14T02:19:38.654Z</updated>
     
@@ -324,19 +324,19 @@
     
     
     
-    <category term="PyQt" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/categories/PyQt/"/>
+    <category term="PyQt" scheme="https://jun.geovbox.com/categories/PyQt/"/>
     
     
-    <category term="PyQt" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/tags/PyQt/"/>
+    <category term="PyQt" scheme="https://jun.geovbox.com/tags/PyQt/"/>
     
-    <category term="GUI" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/tags/GUI/"/>
+    <category term="GUI" scheme="https://jun.geovbox.com/tags/GUI/"/>
     
   </entry>
   
   <entry>
     <title>pyqy小记|生成gif并嵌入到GUI中</title>
-    <link href="https://github.com/JlexZhong/jun.geovbox.com.git/2021/08/30/pyqy-compose-gif-to-gui/"/>
-    <id>https://github.com/JlexZhong/jun.geovbox.com.git/2021/08/30/pyqy-compose-gif-to-gui/</id>
+    <link href="https://jun.geovbox.com/2021/08/30/pyqy-compose-gif-to-gui/"/>
+    <id>https://jun.geovbox.com/2021/08/30/pyqy-compose-gif-to-gui/</id>
     <published>2021-08-30T15:13:27.000Z</published>
     <updated>2021-09-14T02:18:03.776Z</updated>
     
@@ -351,16 +351,16 @@
     
     
     
-    <category term="PyQt" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/tags/PyQt/"/>
+    <category term="PyQt" scheme="https://jun.geovbox.com/tags/PyQt/"/>
     
-    <category term="GUI" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/tags/GUI/"/>
+    <category term="GUI" scheme="https://jun.geovbox.com/tags/GUI/"/>
     
   </entry>
   
   <entry>
     <title>🎃一个坏掉的番茄个人主页——魔改教程、遇坑总结</title>
-    <link href="https://github.com/JlexZhong/jun.geovbox.com.git/2021/08/30/tomotoes_blog/"/>
-    <id>https://github.com/JlexZhong/jun.geovbox.com.git/2021/08/30/tomotoes_blog/</id>
+    <link href="https://jun.geovbox.com/2021/08/30/tomotoes_blog/"/>
+    <id>https://jun.geovbox.com/2021/08/30/tomotoes_blog/</id>
     <published>2021-08-30T10:09:42.000Z</published>
     <updated>2021-09-14T02:22:20.536Z</updated>
     
@@ -371,17 +371,17 @@
     
     
     
-    <category term="hexo" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/categories/hexo/"/>
+    <category term="hexo" scheme="https://jun.geovbox.com/categories/hexo/"/>
     
     
-    <category term="hexo" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/tags/hexo/"/>
+    <category term="hexo" scheme="https://jun.geovbox.com/tags/hexo/"/>
     
   </entry>
   
   <entry>
     <title>pyqt小记|matplotlib嵌入pyqt界面|添加工具条 | matplotlib保存太慢解决方法</title>
-    <link href="https://github.com/JlexZhong/jun.geovbox.com.git/2021/08/29/pyqt-matplotlib-to-pyqt-add-toolbar-matplotlib-save-too-slowly/"/>
-    <id>https://github.com/JlexZhong/jun.geovbox.com.git/2021/08/29/pyqt-matplotlib-to-pyqt-add-toolbar-matplotlib-save-too-slowly/</id>
+    <link href="https://jun.geovbox.com/2021/08/29/pyqt-matplotlib-to-pyqt-add-toolbar-matplotlib-save-too-slowly/"/>
+    <id>https://jun.geovbox.com/2021/08/29/pyqt-matplotlib-to-pyqt-add-toolbar-matplotlib-save-too-slowly/</id>
     <published>2021-08-29T15:14:23.000Z</published>
     <updated>2021-09-14T02:20:53.850Z</updated>
     
@@ -392,21 +392,21 @@
     
     
     
-    <category term="PyQt" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/categories/PyQt/"/>
+    <category term="PyQt" scheme="https://jun.geovbox.com/categories/PyQt/"/>
     
     
-    <category term="PyQt" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/tags/PyQt/"/>
+    <category term="PyQt" scheme="https://jun.geovbox.com/tags/PyQt/"/>
     
-    <category term="GUI" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/tags/GUI/"/>
+    <category term="GUI" scheme="https://jun.geovbox.com/tags/GUI/"/>
     
-    <category term="matplotlib" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/tags/matplotlib/"/>
+    <category term="matplotlib" scheme="https://jun.geovbox.com/tags/matplotlib/"/>
     
   </entry>
   
   <entry>
     <title>HTML学习笔记</title>
-    <link href="https://github.com/JlexZhong/jun.geovbox.com.git/2021/08/29/HTML-note/"/>
-    <id>https://github.com/JlexZhong/jun.geovbox.com.git/2021/08/29/HTML-note/</id>
+    <link href="https://jun.geovbox.com/2021/08/29/HTML-note/"/>
+    <id>https://jun.geovbox.com/2021/08/29/HTML-note/</id>
     <published>2021-08-29T04:22:09.000Z</published>
     <updated>2021-09-14T02:18:41.245Z</updated>
     
@@ -417,17 +417,17 @@
     
     
     
-    <category term="HTML" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/categories/HTML/"/>
+    <category term="HTML" scheme="https://jun.geovbox.com/categories/HTML/"/>
     
     
-    <category term="HTML" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/tags/HTML/"/>
+    <category term="HTML" scheme="https://jun.geovbox.com/tags/HTML/"/>
     
   </entry>
   
   <entry>
     <title>pyqt小记|窗口阴影、透明、无边框</title>
-    <link href="https://github.com/JlexZhong/jun.geovbox.com.git/2021/08/27/pyqt-shadow-frameless/"/>
-    <id>https://github.com/JlexZhong/jun.geovbox.com.git/2021/08/27/pyqt-shadow-frameless/</id>
+    <link href="https://jun.geovbox.com/2021/08/27/pyqt-shadow-frameless/"/>
+    <id>https://jun.geovbox.com/2021/08/27/pyqt-shadow-frameless/</id>
     <published>2021-08-27T15:14:23.000Z</published>
     <updated>2021-09-14T02:20:50.452Z</updated>
     
@@ -438,19 +438,19 @@
     
     
     
-    <category term="PyQt" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/categories/PyQt/"/>
+    <category term="PyQt" scheme="https://jun.geovbox.com/categories/PyQt/"/>
     
     
-    <category term="PyQt" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/tags/PyQt/"/>
+    <category term="PyQt" scheme="https://jun.geovbox.com/tags/PyQt/"/>
     
-    <category term="GUI" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/tags/GUI/"/>
+    <category term="GUI" scheme="https://jun.geovbox.com/tags/GUI/"/>
     
   </entry>
   
   <entry>
     <title>Hexo+Github+matery免费搭建个人博客教程</title>
-    <link href="https://github.com/JlexZhong/jun.geovbox.com.git/2021/08/23/Building-a-Blog/"/>
-    <id>https://github.com/JlexZhong/jun.geovbox.com.git/2021/08/23/Building-a-Blog/</id>
+    <link href="https://jun.geovbox.com/2021/08/23/Building-a-Blog/"/>
+    <id>https://jun.geovbox.com/2021/08/23/Building-a-Blog/</id>
     <published>2021-08-23T04:22:09.000Z</published>
     <updated>2021-08-30T14:40:37.000Z</updated>
     
@@ -461,23 +461,23 @@
     
     
     
-    <category term="博客搭建" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    <category term="博客搭建" scheme="https://jun.geovbox.com/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
     
-    <category term="搭建博客" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/tags/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
+    <category term="搭建博客" scheme="https://jun.geovbox.com/tags/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
     
-    <category term="hexo" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/tags/hexo/"/>
+    <category term="hexo" scheme="https://jun.geovbox.com/tags/hexo/"/>
     
-    <category term="github" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/tags/github/"/>
+    <category term="github" scheme="https://jun.geovbox.com/tags/github/"/>
     
-    <category term="matery" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/tags/matery/"/>
+    <category term="matery" scheme="https://jun.geovbox.com/tags/matery/"/>
     
   </entry>
   
   <entry>
     <title>inception-resnet-v2超参数优化笔记</title>
-    <link href="https://github.com/JlexZhong/jun.geovbox.com.git/2021/08/19/inception-resnet-v2-Parameter-optimization-note/"/>
-    <id>https://github.com/JlexZhong/jun.geovbox.com.git/2021/08/19/inception-resnet-v2-Parameter-optimization-note/</id>
+    <link href="https://jun.geovbox.com/2021/08/19/inception-resnet-v2-Parameter-optimization-note/"/>
+    <id>https://jun.geovbox.com/2021/08/19/inception-resnet-v2-Parameter-optimization-note/</id>
     <published>2021-08-19T10:00:09.000Z</published>
     <updated>2021-09-14T02:18:38.912Z</updated>
     
@@ -488,23 +488,23 @@
     
     
     
-    <category term="图像分类" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/categories/%E5%9B%BE%E5%83%8F%E5%88%86%E7%B1%BB/"/>
+    <category term="图像分类" scheme="https://jun.geovbox.com/categories/%E5%9B%BE%E5%83%8F%E5%88%86%E7%B1%BB/"/>
     
     
-    <category term="深度学习" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    <category term="深度学习" scheme="https://jun.geovbox.com/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
     
-    <category term="tensorflow" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/tags/tensorflow/"/>
+    <category term="tensorflow" scheme="https://jun.geovbox.com/tags/tensorflow/"/>
     
-    <category term="keras" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/tags/keras/"/>
+    <category term="keras" scheme="https://jun.geovbox.com/tags/keras/"/>
     
-    <category term="图像分类" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/tags/%E5%9B%BE%E5%83%8F%E5%88%86%E7%B1%BB/"/>
+    <category term="图像分类" scheme="https://jun.geovbox.com/tags/%E5%9B%BE%E5%83%8F%E5%88%86%E7%B1%BB/"/>
     
   </entry>
   
   <entry>
     <title>pyqt小记 | 添加右键菜单，添加图标和点击事件</title>
-    <link href="https://github.com/JlexZhong/jun.geovbox.com.git/2021/08/17/pyqt-context-add-icon-click/"/>
-    <id>https://github.com/JlexZhong/jun.geovbox.com.git/2021/08/17/pyqt-context-add-icon-click/</id>
+    <link href="https://jun.geovbox.com/2021/08/17/pyqt-context-add-icon-click/"/>
+    <id>https://jun.geovbox.com/2021/08/17/pyqt-context-add-icon-click/</id>
     <published>2021-08-17T15:12:35.000Z</published>
     <updated>2021-09-14T02:20:58.932Z</updated>
     
@@ -519,9 +519,9 @@
     
     
     
-    <category term="PyQt" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/tags/PyQt/"/>
+    <category term="PyQt" scheme="https://jun.geovbox.com/tags/PyQt/"/>
     
-    <category term="GUI" scheme="https://github.com/JlexZhong/jun.geovbox.com.git/tags/GUI/"/>
+    <category term="GUI" scheme="https://jun.geovbox.com/tags/GUI/"/>
     
   </entry>
   
