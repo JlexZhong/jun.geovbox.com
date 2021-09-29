@@ -1,392 +1,2277 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Jlex の Blog - 书山有路勤为径，学海无涯苦作舟</title><meta name="keywords" content="blog"><meta name="author" content="钟军"><meta name="copyright" content="钟军"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="一位不专心搞地质的CS Learner">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Jlex の Blog">
-<meta property="og:url" content="https://github.com/JlexZhong/jun.geovbox.com.git/index.html">
-<meta property="og:site_name" content="Jlex の Blog">
-<meta property="og:description" content="一位不专心搞地质的CS Learner">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://github.com/JlexZhong/jun.geovbox.com.git/img/avatar.png">
-<meta property="article:author" content="钟军">
-<meta property="article:tag" content="blog">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://github.com/JlexZhong/jun.geovbox.com.git/img/avatar.png"><link rel="shortcut icon" href="/JlexZhong/jun.geovbox.com.git/img/favicon.png"><link rel="canonical" href="https://github.com/JlexZhong/jun.geovbox.com.git/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/JlexZhong/jun.geovbox.com.git/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
-  root: '/JlexZhong/jun.geovbox.com.git/',
-  algolia: undefined,
-  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
-  translate: undefined,
-  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
-  highlight: {"plugin":"prismjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
-  copy: {
-    success: '复制成功',
-    error: '复制错误',
-    noSupport: '浏览器不支持'
-  },
-  relativeDate: {
-    homepage: false,
-    post: false
-  },
-  runtime: '天',
-  date_suffix: {
-    just: '刚刚',
-    min: '分钟前',
-    hour: '小时前',
-    day: '天前',
-    month: '个月前'
-  },
-  copyright: undefined,
-  lightbox: 'mediumZoom',
-  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#121212","position":"bottom-left"},
-  source: {
-    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
-    justifiedGallery: {
-      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
-      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
-    },
-    fancybox: {
-      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
-      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
-    }
-  },
-  isPhotoFigcaption: false,
-  islazyload: false,
-  isanchor: false
-}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
-  title: 'Jlex の Blog',
-  isPost: false,
-  isHome: true,
-  isHighlightShrink: false,
-  isToc: false,
-  postUpdate: '2021-09-30 00:18:33'
-}</script><noscript><style type="text/css">
-  #nav {
-    opacity: 1
-  }
-  .justified-gallery img {
-    opacity: 1
-  }
+<!DOCTYPE HTML>
+<html lang="zh-CN">
 
-  #recent-posts time,
-  #post-meta time {
-    display: inline !important
-  }
-</style></noscript><script>(win=>{
-    win.saveToLocal = {
-      set: function setWithExpiry(key, value, ttl) {
-        if (ttl === 0) return
-        const now = new Date()
-        const expiryDay = ttl * 86400000
-        const item = {
-          value: value,
-          expiry: now.getTime() + expiryDay,
-        }
-        localStorage.setItem(key, JSON.stringify(item))
-      },
 
-      get: function getWithExpiry(key) {
-        const itemStr = localStorage.getItem(key)
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="blog">
+    <meta name="description" content="一位不专心搞地质的CS Learner">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
 
-        if (!itemStr) {
-          return undefined
-        }
-        const item = JSON.parse(itemStr)
-        const now = new Date()
 
-        if (now.getTime() > item.expiry) {
-          localStorage.removeItem(key)
-          return undefined
-        }
-        return item.value
-      }
-    }
-  
-    win.getScript = url => new Promise((resolve, reject) => {
-      const script = document.createElement('script')
-      script.src = url
-      script.async = true
-      script.onerror = reject
-      script.onload = script.onreadystatechange = function() {
-        const loadState = this.readyState
-        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-        script.onload = script.onreadystatechange = null
-        resolve()
-      }
-      document.head.appendChild(script)
-    })
-  
-      win.activateDarkMode = function () {
-        document.documentElement.setAttribute('data-theme', 'dark')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
-        }
-      }
-      win.activateLightMode = function () {
-        document.documentElement.setAttribute('data-theme', 'light')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
-        }
-      }
-      const t = saveToLocal.get('theme')
-    
-          if (t === 'dark') activateDarkMode()
-          else if (t === 'light') activateLightMode()
-        
-      const asideStatus = saveToLocal.get('aside-status')
-      if (asideStatus !== undefined) {
-        if (asideStatus === 'hide') {
-          document.documentElement.classList.add('hide-aside')
-        } else {
-          document.documentElement.classList.remove('hide-aside')
-        }
-      }
-    
-    const detectApple = () => {
-      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
-        document.documentElement.classList.add('apple')
-      }
-    }
-    detectApple()
-    document.addEventListener('pjax:complete', detectApple)})(window)</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/static-butterfly/dist/css/index.min.css"><link rel="stylesheet" href="//at.alicdn.com/t/font_2776951_mnudrbb23bf.css" media="defer" onload="this.media='all'"><meta name="generator" content="Hexo 5.4.0">
+    <title>Jlex の Blog</title>
+    <link rel="icon" type="image/png" href="/JlexZhong/jun.geovbox.com.git/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/JlexZhong/jun.geovbox.com.git/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/JlexZhong/jun.geovbox.com.git/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/JlexZhong/jun.geovbox.com.git/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/JlexZhong/jun.geovbox.com.git/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/JlexZhong/jun.geovbox.com.git/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/JlexZhong/jun.geovbox.com.git/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/JlexZhong/jun.geovbox.com.git/css/my.css">
+
+    <script src="/JlexZhong/jun.geovbox.com.git/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
 <link rel="alternate" href="/JlexZhong/jun.geovbox.com.git/atom.xml" title="Jlex の Blog" type="application/atom+xml">
-</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/JlexZhong/jun.geovbox.com.git/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/JlexZhong/jun.geovbox.com.git/archives/"><div class="headline">文章</div><div class="length-num">22</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/JlexZhong/jun.geovbox.com.git/tags/"><div class="headline">标签</div><div class="length-num">21</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/JlexZhong/jun.geovbox.com.git/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/JlexZhong/jun.geovbox.com.git/"><i class="fa-fw fas fa-home"></i><span> 博客主页</span></a></div><div class="menus_item"><a class="site-page" href="/JlexZhong/jun.geovbox.com.git/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/JlexZhong/jun.geovbox.com.git/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/JlexZhong/jun.geovbox.com.git/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/JlexZhong/jun.geovbox.com.git/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/JlexZhong/jun.geovbox.com.git/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('https://up.enterdesk.com/edpic_source/3e/07/3d/3e073d90caccda80eac6b6dc14b9681a.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/JlexZhong/jun.geovbox.com.git/">Jlex の Blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/JlexZhong/jun.geovbox.com.git/"><i class="fa-fw fas fa-home"></i><span> 博客主页</span></a></div><div class="menus_item"><a class="site-page" href="/JlexZhong/jun.geovbox.com.git/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/JlexZhong/jun.geovbox.com.git/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/JlexZhong/jun.geovbox.com.git/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/JlexZhong/jun.geovbox.com.git/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/JlexZhong/jun.geovbox.com.git/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Jlex の Blog</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/JlexZhong" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:junzhong0917@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2678091501&amp;site=qq&amp;menu=yes" target="_blank" title="QQ"><i class="iconfont icon-QQ"></i></a><a class="social-icon" href="https://mp.weixin.qq.com/mp/profile_ext?action=home&amp;__biz=Mzg4MzY0ODExMw==&amp;scene=124&amp;uin=&amp;key=&amp;devicetype=Windows+10+x64&amp;version=63030522&amp;lang=zh_CN&amp;a8scene=7&amp;fontgear=2" target="_blank" title="微信"><i class="iconfont icon-weixin"></i></a><a class="social-icon" href="https://www.zhihu.com/people/jiang-lang-cai-jin-de-jiang-jin" target="_blank" title="知乎"><i class="iconfont icon-shejiaotubiao-46"></i></a><a class="social-icon" href="https://space.bilibili.com/545306558" target="_blank" title="哔哩哔哩"><i class="iconfont icon-icon_bilibili-circle"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/JlexZhong/jun.geovbox.com.git/2021/09/17/(Mask-R-CNN)-AssertionError-in%20run_graph()/" title="(Mask R-CNN) AssertionError when I run inspect_model.py in run_graph()">     <img class="post_bg" src="https://up.enterdesk.com/edpic_source/b5/11/20/b511208bdc860c02baf3f1fcf4c5c6c0.jpg" onerror="this.onerror=null;this.src='/JlexZhong/jun.geovbox.com.git/img/404.jpg'" alt="(Mask R-CNN) AssertionError when I run inspect_model.py in run_graph()"></a></div><div class="recent-post-info"><a class="article-title" href="/JlexZhong/jun.geovbox.com.git/2021/09/17/(Mask-R-CNN)-AssertionError-in%20run_graph()/" title="(Mask R-CNN) AssertionError when I run inspect_model.py in run_graph()">(Mask R-CNN) AssertionError when I run inspect_model.py in run_graph()</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-09-17T10:00:09.000Z" title="发表于 2021-09-17 18:00:09">2021-09-17</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/JlexZhong/jun.geovbox.com.git/categories/BUG/">BUG</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/JlexZhong/jun.geovbox.com.git/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/JlexZhong/jun.geovbox.com.git/tags/tensorflow/">tensorflow</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/JlexZhong/jun.geovbox.com.git/tags/keras/">keras</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/JlexZhong/jun.geovbox.com.git/tags/Mask-R-CNN/">Mask R-CNN</a></span></div><div class="content">实现Mask R-CNN 遇到的问题</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/JlexZhong/jun.geovbox.com.git/2021/09/11/solve-tensorboard-1.13.1-cannot-open-url/" title="解决tensorboard 1.13.1 无法打开生成的网址">     <img class="post_bg" src="https://up.enterdesk.com/edpic_source/82/4e/52/824e528e28ea67355f328982cba13f66.jpg" onerror="this.onerror=null;this.src='/JlexZhong/jun.geovbox.com.git/img/404.jpg'" alt="解决tensorboard 1.13.1 无法打开生成的网址"></a></div><div class="recent-post-info"><a class="article-title" href="/JlexZhong/jun.geovbox.com.git/2021/09/11/solve-tensorboard-1.13.1-cannot-open-url/" title="解决tensorboard 1.13.1 无法打开生成的网址">解决tensorboard 1.13.1 无法打开生成的网址</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-09-11T14:00:09.000Z" title="发表于 2021-09-11 22:00:09">2021-09-11</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/JlexZhong/jun.geovbox.com.git/categories/tensorflow/">tensorflow</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/JlexZhong/jun.geovbox.com.git/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/JlexZhong/jun.geovbox.com.git/tags/tensorflow/">tensorflow</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/JlexZhong/jun.geovbox.com.git/tags/keras/">keras</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/JlexZhong/jun.geovbox.com.git/tags/BUG/">BUG</a></span></div><div class="content">解决tensorboard 1.13.1 无法打开生成的网址，在命令行中加上`--host=127.0.0.1`，即可完美解决</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/JlexZhong/jun.geovbox.com.git/2021/09/11/python_BUG/" title="python开发中遇到的原生问题">     <img class="post_bg" src="https://up.enterdesk.com/edpic_source/82/4e/52/824e528e28ea67355f328982cba13f66.jpg" onerror="this.onerror=null;this.src='/JlexZhong/jun.geovbox.com.git/img/404.jpg'" alt="python开发中遇到的原生问题"></a></div><div class="recent-post-info"><a class="article-title" href="/JlexZhong/jun.geovbox.com.git/2021/09/11/python_BUG/" title="python开发中遇到的原生问题">python开发中遇到的原生问题</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-09-11T04:00:09.000Z" title="发表于 2021-09-11 12:00:09">2021-09-11</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/JlexZhong/jun.geovbox.com.git/categories/Python/">Python</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/JlexZhong/jun.geovbox.com.git/tags/Python/">Python</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/JlexZhong/jun.geovbox.com.git/tags/BUG/">BUG</a></span></div><div class="content">记录一下在# python开发中遇到的原生问题，BUG</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/JlexZhong/jun.geovbox.com.git/2021/09/09/mask_rcnn-bug-note/" title="mask r-cnn 遇到的坑">     <img class="post_bg" src="https://up.enterdesk.com/edpic_source/b5/11/20/b511208bdc860c02baf3f1fcf4c5c6c0.jpg" onerror="this.onerror=null;this.src='/JlexZhong/jun.geovbox.com.git/img/404.jpg'" alt="mask r-cnn 遇到的坑"></a></div><div class="recent-post-info"><a class="article-title" href="/JlexZhong/jun.geovbox.com.git/2021/09/09/mask_rcnn-bug-note/" title="mask r-cnn 遇到的坑">mask r-cnn 遇到的坑</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-09-09T04:00:09.000Z" title="发表于 2021-09-09 12:00:09">2021-09-09</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/JlexZhong/jun.geovbox.com.git/categories/Mask-R-CNN/">Mask R-CNN</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/JlexZhong/jun.geovbox.com.git/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/JlexZhong/jun.geovbox.com.git/tags/tensorflow/">tensorflow</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/JlexZhong/jun.geovbox.com.git/tags/keras/">keras</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/JlexZhong/jun.geovbox.com.git/tags/Mask-R-CNN/">Mask R-CNN</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/JlexZhong/jun.geovbox.com.git/tags/%E5%AE%9E%E4%BE%8B%E5%88%86%E5%89%B2/">实例分割</a></span></div><div class="content">记录一下在配置TensorFlow和训练过程中遇到的BUG</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/JlexZhong/jun.geovbox.com.git/2021/09/09/use-Mask-R-CNN-train-dataset-myself/" title="使用Mask-R-CNN训练自己的数据集">     <img class="post_bg" src="https://up.enterdesk.com/edpic_source/82/4e/52/824e528e28ea67355f328982cba13f66.jpg" onerror="this.onerror=null;this.src='/JlexZhong/jun.geovbox.com.git/img/404.jpg'" alt="使用Mask-R-CNN训练自己的数据集"></a></div><div class="recent-post-info"><a class="article-title" href="/JlexZhong/jun.geovbox.com.git/2021/09/09/use-Mask-R-CNN-train-dataset-myself/" title="使用Mask-R-CNN训练自己的数据集">使用Mask-R-CNN训练自己的数据集</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-09-09T04:00:09.000Z" title="发表于 2021-09-09 12:00:09">2021-09-09</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/JlexZhong/jun.geovbox.com.git/categories/Mask-R-CNN/">Mask R-CNN</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/JlexZhong/jun.geovbox.com.git/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/JlexZhong/jun.geovbox.com.git/tags/tensorflow/">tensorflow</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/JlexZhong/jun.geovbox.com.git/tags/keras/">keras</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/JlexZhong/jun.geovbox.com.git/tags/Mask-R-CNN/">Mask R-CNN</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/JlexZhong/jun.geovbox.com.git/tags/%E5%AE%9E%E4%BE%8B%E5%88%86%E5%89%B2/">实例分割</a></span></div><div class="content">如何使用Mask R-CNN训练自己的数据集，以及遇到的use_multiprocessing=True的BUG</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/JlexZhong/jun.geovbox.com.git/2021/09/02/tensorflow.js-deploy-web/" title="tensorflow.js部署到web 笔记">     <img class="post_bg" src="https://up.enterdesk.com/edpic_source/82/4e/52/824e528e28ea67355f328982cba13f66.jpg" onerror="this.onerror=null;this.src='/JlexZhong/jun.geovbox.com.git/img/404.jpg'" alt="tensorflow.js部署到web 笔记"></a></div><div class="recent-post-info"><a class="article-title" href="/JlexZhong/jun.geovbox.com.git/2021/09/02/tensorflow.js-deploy-web/" title="tensorflow.js部署到web 笔记">tensorflow.js部署到web 笔记</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-09-02T04:00:09.000Z" title="发表于 2021-09-02 12:00:09">2021-09-02</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/JlexZhong/jun.geovbox.com.git/categories/tensorflow/">tensorflow</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/JlexZhong/jun.geovbox.com.git/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/JlexZhong/jun.geovbox.com.git/tags/tensorflow/">tensorflow</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/JlexZhong/jun.geovbox.com.git/tags/tensorflow-js/">tensorflow.js</a></span></div><div class="content">tensorflow.js部署到web,部署到生产环境中，我将python训练的模型进行转换，部署到博客的网页中</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/JlexZhong/jun.geovbox.com.git/2021/09/01/by-InceptionV3-transfer-learning/" title="基于InceptionV3深度学习实现岩石图像智能识别与分类">     <img class="post_bg" src="https://up.enterdesk.com/edpic_source/b5/11/20/b511208bdc860c02baf3f1fcf4c5c6c0.jpg" onerror="this.onerror=null;this.src='/JlexZhong/jun.geovbox.com.git/img/404.jpg'" alt="基于InceptionV3深度学习实现岩石图像智能识别与分类"></a></div><div class="recent-post-info"><a class="article-title" href="/JlexZhong/jun.geovbox.com.git/2021/09/01/by-InceptionV3-transfer-learning/" title="基于InceptionV3深度学习实现岩石图像智能识别与分类">基于InceptionV3深度学习实现岩石图像智能识别与分类</a><div class="article-meta-wrap"><span class="article-meta"><i class="fas fa-thumbtack sticky"></i><span class="sticky">置顶</span><span class="article-meta__separator">|</span></span><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-09-01T10:00:09.000Z" title="发表于 2021-09-01 18:00:09">2021-09-01</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/JlexZhong/jun.geovbox.com.git/categories/%E5%9B%BE%E5%83%8F%E5%88%86%E7%B1%BB/">图像分类</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/JlexZhong/jun.geovbox.com.git/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/JlexZhong/jun.geovbox.com.git/tags/tensorflow/">tensorflow</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/JlexZhong/jun.geovbox.com.git/tags/keras/">keras</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/JlexZhong/jun.geovbox.com.git/tags/%E5%9B%BE%E5%83%8F%E5%88%86%E7%B1%BB/">图像分类</a></span></div><div class="content">基于InceptionV3深度卷积神经网络，迁移学习实现岩石图像智能识别与分类，迁移学习的一般步骤</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/JlexZhong/jun.geovbox.com.git/2021/08/30/Python-batch-delet-files/" title="Python批量删除含有指定字符的文件或文件夹">     <img class="post_bg" src="https://up.enterdesk.com/edpic_source/d0/5a/0f/d05a0fd216fbf0de1c081841b8875f46.jpg" onerror="this.onerror=null;this.src='/JlexZhong/jun.geovbox.com.git/img/404.jpg'" alt="Python批量删除含有指定字符的文件或文件夹"></a></div><div class="recent-post-info"><a class="article-title" href="/JlexZhong/jun.geovbox.com.git/2021/08/30/Python-batch-delet-files/" title="Python批量删除含有指定字符的文件或文件夹">Python批量删除含有指定字符的文件或文件夹</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-08-30T15:18:38.000Z" title="发表于 2021-08-30 23:18:38">2021-08-30</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/JlexZhong/jun.geovbox.com.git/categories/python/">python</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/JlexZhong/jun.geovbox.com.git/tags/python/">python</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/JlexZhong/jun.geovbox.com.git/tags/%E7%AE%97%E6%B3%95/">算法</a></span></div><div class="content">Python批量删除含有指定字符的文件或文件夹# encoding: UTF-8
+</head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/JlexZhong/jun.geovbox.com.git/" class="waves-effect waves-light">
+                    
+                    <img src="/JlexZhong/jun.geovbox.com.git/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Jlex の Blog</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/JlexZhong/jun.geovbox.com.git/./" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/JlexZhong/jun.geovbox.com.git/./tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/JlexZhong/jun.geovbox.com.git/./categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/JlexZhong/jun.geovbox.com.git/./archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/JlexZhong/jun.geovbox.com.git/./about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/JlexZhong/jun.geovbox.com.git/./contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/JlexZhong/jun.geovbox.com.git/./friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/JlexZhong/jun.geovbox.com.git/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Jlex の Blog</div>
+        <div class="logo-desc">
+            
+            一位不专心搞地质的CS Learner
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/JlexZhong/jun.geovbox.com.git/./" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/JlexZhong/jun.geovbox.com.git/./tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/JlexZhong/jun.geovbox.com.git/./categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/JlexZhong/jun.geovbox.com.git/./archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/JlexZhong/jun.geovbox.com.git/./about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/JlexZhong/jun.geovbox.com.git/./contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/JlexZhong/jun.geovbox.com.git/./friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+<style>
+    .carousel-control {
+        width: 45px;
+        height: 45px;
+        line-height: 55px;
+        border-radius: 45px;
+        background: transparent;
+        cursor: pointer;
+        z-index: 100;
+    }
+
+    #prev-cover {
+        position: absolute;
+        top: 48%;
+        left: 8px;
+    }
+
+    #next-cover {
+        position: absolute;
+        top: 48%;
+        right: 8px;;
+    }
+
+    #prev-cover i {
+        margin-right: 3px;
+    }
+
+    #next-cover i {
+        margin-left: 3px;
+    }
+
+    .carousel-control:hover {
+        background-color: rgba(0, 0, 0, .4);
+    }
+
+    .carousel-control i {
+        color: #fff;
+        font-size: 2.4rem;
+    }
+</style>
+
+
+
+<div class="carousel carousel-slider center index-cover" data-indicators="true" style="margin-top: -64px;">
+    
+
+    <div class="carousel-item red white-text bg-cover about-cover">
+        <div class="container">
+            <div class="row">
+    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
+        <div class="brand">
+            <div class="title center-align">
+                
+                书山有路勤为径，学海无涯苦作舟
+                
+            </div>
+
+            <div class="description center-align">
+                
+                <span id="subtitle"></span>
+                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+                <script>
+                    var typed = new Typed("#subtitle", {
+                        strings: [ 
+                            
+                                "从来没有真正的绝境, 只有心灵的迷途",
+                            
+                                "Never really desperate, only the lost of the soul",
+                            
+                        ],
+                        startDelay: 300,
+                        typeSpeed: 100,
+                        loop: true,
+                        backSpeed: 50,
+                        showCursor: true
+                    });
+                </script>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    // 每天切换 banner 图.  Switch banner image every day.
+    var bannerUrl = "/JlexZhong/jun.geovbox.com.git/medias/banner/" + new Date().getDay() + '.jpg';
+    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+</script>
+
+
+
+            <div class="cover-btns">
+                <a href="#indexCard" class="waves-effect waves-light btn">
+                    <i class="fa fa-angle-double-down"></i>开始阅读
+                </a>
+
+                
+                    <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light btn" target="_blank">
+                        <i class="fab fa-github-alt"></i>Github
+                    </a>
+                
+            </div>
+            <div class="cover-social-link">
+    <a href="https://github.com/JlexZhong" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:junzhong0917@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2678091501" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 2678091501" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+    <a href="https://www.zhihu.com/people/jiang-lang-cai-jin-de-jiang-jin" class="tooltipped" target="_blank" data-tooltip="关注我的知乎: https://www.zhihu.com/people/jiang-lang-cai-jin-de-jiang-jin" data-position="top" data-delay="50">
+        <i class="fab fa-zhihu1">知</i>
+    </a>
+
+
+
+    <a href="/JlexZhong/jun.geovbox.com.git/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script>
+    $(function () {
+        let coverSlider = $('.carousel');
+
+        //用户触摸轮播自动 restartPlay 是否生效
+        let initUserPressedOrDraggedActive = false
+
+        //用户触摸轮播自动 restartPlay
+        function initUserPressedOrDragged(instance) {
+            setInterval(() => {
+                if (instance.pressed || instance.dragged) {
+                    // console.log('initUserPressedOrDragged: ',instance.pressed,instance.dragged)
+                    restartPlay()
+                }
+            }, 1000)
+        }
+
+        coverSlider.carousel({
+            duration: Number('120'),
+            fullWidth: true,
+            indicators: 'true' === 'true',
+            onCycleTo() {
+                if (!initUserPressedOrDraggedActive) {
+                    // console.log('initUserPressedOrDraggedActive')
+                    initUserPressedOrDragged(this)
+                    initUserPressedOrDraggedActive = true
+                }
+            },
+        })
+
+        let carouselIntervalId;
+        
+        // Loop to call the next cover article picture.
+        let autoCarousel = function () {
+            carouselIntervalId = setInterval(function () {
+                coverSlider.carousel('next');
+            }, 5000);
+        };
+        autoCarousel();
+        
+
+        function restartPlay() {
+            
+            clearInterval(carouselIntervalId);
+            autoCarousel();
+            
+        };
+
+        
+        // prev and next cover post.
+        $('#prev-cover').click(function () {
+            coverSlider.carousel('prev');
+            restartPlay();
+        });
+        $('#next-cover').click(function () {
+            coverSlider.carousel('next');
+            restartPlay();
+        });
+        
+    });
+</script>
+
+
+
+<main class="content">
+
+    
+    <div id="indexCard" class="index-card">
+        <div class="container ">
+            <div class="card">
+                <div class="card-content">
+                    
+                        <div class="dream">
+    
+    <div class="title center-align">
+        <i class="far fa-lightbulb"></i>&nbsp;&nbsp;个人介绍
+    </div>
+    
+    <div class="row">
+        <div class="col l8 offset-l2 m10 offset-m1 s10 offset-s1 center-align text">
+            在校大三学生，一位不专心搞地质的CS learner。正在努力学习计算机视觉与深度学习开发，掌握图像分类、分割与目标检测，熟悉掌握TensorFlow框架，熟练掌握PyQt、Tkinter等GUI桌面程序界面开发，熟练掌握Python和Qt多线程开发，熟悉Python数据可视化，精通matplotlib、pyqtgraph等绘图库，熟悉Git版本管理。书山有路勤为径，学海无涯苦作舟。
+        </div>
+    </div>
+</div>
+
+                    
+
+                    
+
+                    
+
+                    
+                    <div id="recommend-sections" class="recommend">
+                        
+
+
+
+
+
+<div class="title"><i class="far fa-thumbs-up"></i>&nbsp;&nbsp;推荐文章</div>
+
+<div class="row">
+
+    
+    
+    <div class="col s12" >
+        
+            <div class="post-card" style="background-image: url('/JlexZhong/jun.geovbox.com.git/medias/featureimages/16.jpg')">
+            
+            <div class="post-body">
+                <div class="post-categories">
+                    
+                        
+                            <a href="/JlexZhong/jun.geovbox.com.git/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="category">博客搭建</a>
+                        
+                    
+                </div>
+                <a href="/JlexZhong/jun.geovbox.com.git/2021/08/23/Building-a-Blog/">
+                    <h3 class="post-title">Hexo+Github+matery免费搭建个人博客教程</h3>
+                </a>
+                <p class="post-description">Hexo+Github免费搭建个人博客详细教程效果图
+
+
+安装安装Node.js安装Node.js，一直默认。输入：（查看是否安装正确）
+
+```node -v
+
+- 添</p>
+                <a href="/JlexZhong/jun.geovbox.com.git/2021/08/23/Building-a-Blog/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #FF5E3A 0%, #FF2A68 100%)" target="_blank">
+                    <i class="icon far fa-eye fa-fw"></i>阅读更多
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="col s12 m6" data-aos="zoom-in-up">
+        
+            <div class="post-card" style="background-image: url('/JlexZhong/jun.geovbox.com.git/medias/featureimages/15.jpg')">
+            
+            <div class="post-body">
+                <div class="post-categories">
+                    
+                        
+                            <a href="/JlexZhong/jun.geovbox.com.git/categories/hexo/" class="category">hexo</a>
+                        
+                    
+                </div>
+                <a href="/JlexZhong/jun.geovbox.com.git/2021/08/30/tomotoes_blog/">
+                    <h3 class="post-title">🎃一个坏掉的番茄个人主页——魔改教程、遇坑总结</h3>
+                </a>
+                <p class="post-description">🎃一个坏掉的番茄个人主页——魔改教程、遇坑总结主页模板地址：https://github.com/Tomotoes/HomePage
+中文</p>
+                <a href="/JlexZhong/jun.geovbox.com.git/2021/08/30/tomotoes_blog/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #EF4DB6 0%, #C643FC 100%)" target="_blank">
+                    <i class="icon far fa-eye fa-fw"></i>阅读更多
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="col s12 m6" data-aos="zoom-in-up">
+        
+            <div class="post-card" style="background-image: url('/JlexZhong/jun.geovbox.com.git/medias/featureimages/7.jpg')">
+            
+            <div class="post-body">
+                <div class="post-categories">
+                    
+                        
+                            <a href="/JlexZhong/jun.geovbox.com.git/categories/%E5%9B%BE%E5%83%8F%E5%88%86%E7%B1%BB/" class="category">图像分类</a>
+                        
+                    
+                </div>
+                <a href="/JlexZhong/jun.geovbox.com.git/2021/09/01/by-InceptionV3-transfer-learning/">
+                    <h3 class="post-title">基于InceptionV3深度学习实现岩石图像智能识别与分类</h3>
+                </a>
+                <p class="post-description">基于InceptionV3深度学习实现岩石图像智能识别与分类总体流程
+整理数据集（训练集、验证集），按照目录格式分类
+读取数据集图像，归一化</p>
+                <a href="/JlexZhong/jun.geovbox.com.git/2021/09/01/by-InceptionV3-transfer-learning/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #1AD6FD 0%, #1D62F0 100%)" target="_blank">
+                    <i class="icon far fa-eye fa-fw"></i>阅读更多
+                </a>
+            </div>
+        </div>
+    </div>
+    
+
+</div>
+
+
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    
+
+    <!-- 所有文章卡片 -->
+    <article id="articles" class="container articles">
+        <div class="row article-row">
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/JlexZhong/jun.geovbox.com.git/2021/09/17/(Mask-R-CNN)-AssertionError-in%20run_graph()/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/JlexZhong/jun.geovbox.com.git/medias/featureimages/20.jpg" class="responsive-img" alt="(Mask R-CNN) AssertionError when I run inspect_model.py in run_graph()">
+                            
+                            <span class="card-title">(Mask R-CNN) AssertionError when I run inspect_model.py in run_graph()</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                (Mask R-CNN) AssertionError when I run inspect_model.py in run_graph()BUG:
+inspect_model.ipynb的 ###1.b RPN Prediction部分，
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-17
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/JlexZhong/jun.geovbox.com.git/categories/BUG/" class="post-category">
+                                    BUG
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/JlexZhong/jun.geovbox.com.git/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
+                            <span class="chip bg-color">深度学习</span>
+                        </a>
+                        
+                        <a href="/JlexZhong/jun.geovbox.com.git/tags/tensorflow/">
+                            <span class="chip bg-color">tensorflow</span>
+                        </a>
+                        
+                        <a href="/JlexZhong/jun.geovbox.com.git/tags/keras/">
+                            <span class="chip bg-color">keras</span>
+                        </a>
+                        
+                        <a href="/JlexZhong/jun.geovbox.com.git/tags/Mask-R-CNN/">
+                            <span class="chip bg-color">Mask R-CNN</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/JlexZhong/jun.geovbox.com.git/2021/09/11/solve-tensorboard-1.13.1-cannot-open-url/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/JlexZhong/jun.geovbox.com.git/medias/featureimages/21.jpg" class="responsive-img" alt="解决tensorboard 1.13.1 无法打开生成的网址">
+                            
+                            <span class="card-title">解决tensorboard 1.13.1 无法打开生成的网址</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                解决tensorboard 1.13.1 无法打开生成的网址使用命令：
+tensorboard --logdir=logs
+
+得到如下网址：
+TensorBoard 1.15.0 at http://LAPTOP-10GIDQTB:6006
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-11
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/JlexZhong/jun.geovbox.com.git/categories/tensorflow/" class="post-category">
+                                    tensorflow
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/JlexZhong/jun.geovbox.com.git/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
+                            <span class="chip bg-color">深度学习</span>
+                        </a>
+                        
+                        <a href="/JlexZhong/jun.geovbox.com.git/tags/tensorflow/">
+                            <span class="chip bg-color">tensorflow</span>
+                        </a>
+                        
+                        <a href="/JlexZhong/jun.geovbox.com.git/tags/keras/">
+                            <span class="chip bg-color">keras</span>
+                        </a>
+                        
+                        <a href="/JlexZhong/jun.geovbox.com.git/tags/BUG/">
+                            <span class="chip bg-color">BUG</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/JlexZhong/jun.geovbox.com.git/2021/09/11/python_BUG/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/JlexZhong/jun.geovbox.com.git/medias/featureimages/5.jpg" class="responsive-img" alt="python开发中遇到的原生问题">
+                            
+                            <span class="card-title">python开发中遇到的原生问题</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                python开发中遇到的原生问题BUG：
+
+```BUG:QObject::startTimer: Timers cannot be started from another thread
+
+- 原因：多线程问题。在子线程中对主线程的对象进
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-11
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/JlexZhong/jun.geovbox.com.git/categories/Python/" class="post-category">
+                                    Python
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/JlexZhong/jun.geovbox.com.git/tags/Python/">
+                            <span class="chip bg-color">Python</span>
+                        </a>
+                        
+                        <a href="/JlexZhong/jun.geovbox.com.git/tags/BUG/">
+                            <span class="chip bg-color">BUG</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/JlexZhong/jun.geovbox.com.git/2021/09/09/mask_rcnn-bug-note/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/JlexZhong/jun.geovbox.com.git/medias/featureimages/6.jpg" class="responsive-img" alt="mask r-cnn 遇到的坑">
+                            
+                            <span class="card-title">mask r-cnn 遇到的坑</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                mask r-cnn 遇到的坑 记录BUG：module ‘tensorflow.compat.v2.internal‘ has no attribute ‘register_clear_session_function’ 已解决更新ten
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-09
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/JlexZhong/jun.geovbox.com.git/categories/Mask-R-CNN/" class="post-category">
+                                    Mask R-CNN
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/JlexZhong/jun.geovbox.com.git/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
+                            <span class="chip bg-color">深度学习</span>
+                        </a>
+                        
+                        <a href="/JlexZhong/jun.geovbox.com.git/tags/tensorflow/">
+                            <span class="chip bg-color">tensorflow</span>
+                        </a>
+                        
+                        <a href="/JlexZhong/jun.geovbox.com.git/tags/keras/">
+                            <span class="chip bg-color">keras</span>
+                        </a>
+                        
+                        <a href="/JlexZhong/jun.geovbox.com.git/tags/Mask-R-CNN/">
+                            <span class="chip bg-color">Mask R-CNN</span>
+                        </a>
+                        
+                        <a href="/JlexZhong/jun.geovbox.com.git/tags/%E5%AE%9E%E4%BE%8B%E5%88%86%E5%89%B2/">
+                            <span class="chip bg-color">实例分割</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/JlexZhong/jun.geovbox.com.git/2021/09/09/use-Mask-R-CNN-train-dataset-myself/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/JlexZhong/jun.geovbox.com.git/medias/featureimages/7.jpg" class="responsive-img" alt="使用Mask-R-CNN训练自己的数据集">
+                            
+                            <span class="card-title">使用Mask-R-CNN训练自己的数据集</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                使用Mask-R-CNN训练自己的数据集训练自己数据的步骤：
+安装Labelmepip install labelme
+
+pip install pyqt5
+
+pip install pillow==4.0.0
+
+标注数据
+使用labelm
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-09
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/JlexZhong/jun.geovbox.com.git/categories/Mask-R-CNN/" class="post-category">
+                                    Mask R-CNN
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/JlexZhong/jun.geovbox.com.git/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
+                            <span class="chip bg-color">深度学习</span>
+                        </a>
+                        
+                        <a href="/JlexZhong/jun.geovbox.com.git/tags/tensorflow/">
+                            <span class="chip bg-color">tensorflow</span>
+                        </a>
+                        
+                        <a href="/JlexZhong/jun.geovbox.com.git/tags/keras/">
+                            <span class="chip bg-color">keras</span>
+                        </a>
+                        
+                        <a href="/JlexZhong/jun.geovbox.com.git/tags/Mask-R-CNN/">
+                            <span class="chip bg-color">Mask R-CNN</span>
+                        </a>
+                        
+                        <a href="/JlexZhong/jun.geovbox.com.git/tags/%E5%AE%9E%E4%BE%8B%E5%88%86%E5%89%B2/">
+                            <span class="chip bg-color">实例分割</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/JlexZhong/jun.geovbox.com.git/2021/09/02/tensorflow.js-deploy-web/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/JlexZhong/jun.geovbox.com.git/medias/featureimages/2.jpg" class="responsive-img" alt="tensorflow.js部署到web 笔记">
+                            
+                            <span class="card-title">tensorflow.js部署到web 笔记</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                tensorflow.js部署到web 笔记BUG：
+无法加载源映射
+Could not read source map for https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest: U
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-02
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/JlexZhong/jun.geovbox.com.git/categories/tensorflow/" class="post-category">
+                                    tensorflow
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/JlexZhong/jun.geovbox.com.git/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
+                            <span class="chip bg-color">深度学习</span>
+                        </a>
+                        
+                        <a href="/JlexZhong/jun.geovbox.com.git/tags/tensorflow/">
+                            <span class="chip bg-color">tensorflow</span>
+                        </a>
+                        
+                        <a href="/JlexZhong/jun.geovbox.com.git/tags/tensorflow-js/">
+                            <span class="chip bg-color">tensorflow.js</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/JlexZhong/jun.geovbox.com.git/2021/09/01/by-InceptionV3-transfer-learning/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/JlexZhong/jun.geovbox.com.git/medias/featureimages/7.jpg" class="responsive-img" alt="基于InceptionV3深度学习实现岩石图像智能识别与分类">
+                            
+                            <span class="card-title">基于InceptionV3深度学习实现岩石图像智能识别与分类</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                基于InceptionV3深度学习实现岩石图像智能识别与分类总体流程
+整理数据集（训练集、验证集），按照目录格式分类
+读取数据集图像，归一化处理和数据增强
+加载预训练模型InceptionV3，作为基础模型
+在Inception卷积神经网络
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-01
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/JlexZhong/jun.geovbox.com.git/categories/%E5%9B%BE%E5%83%8F%E5%88%86%E7%B1%BB/" class="post-category">
+                                    图像分类
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/JlexZhong/jun.geovbox.com.git/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
+                            <span class="chip bg-color">深度学习</span>
+                        </a>
+                        
+                        <a href="/JlexZhong/jun.geovbox.com.git/tags/tensorflow/">
+                            <span class="chip bg-color">tensorflow</span>
+                        </a>
+                        
+                        <a href="/JlexZhong/jun.geovbox.com.git/tags/keras/">
+                            <span class="chip bg-color">keras</span>
+                        </a>
+                        
+                        <a href="/JlexZhong/jun.geovbox.com.git/tags/%E5%9B%BE%E5%83%8F%E5%88%86%E7%B1%BB/">
+                            <span class="chip bg-color">图像分类</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/JlexZhong/jun.geovbox.com.git/2021/08/30/Python-batch-delet-files/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/JlexZhong/jun.geovbox.com.git/medias/featureimages/7.jpg" class="responsive-img" alt="Python批量删除含有指定字符的文件或文件夹">
+                            
+                            <span class="card-title">Python批量删除含有指定字符的文件或文件夹</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                Python批量删除含有指定字符的文件或文件夹# encoding: UTF-8
 
 import os
 from pathlib import Path
 
 p = Path(r'./test/erli')
-# 这里不得不感慨，Python的库，几乎满足你所有需要，看，连这个递归查找过滤都有了！
-# 实现思路：递归遍历文件夹中的文件，如果文件名包含"(-)"，就删掉，下面是代码：
-for file in p.rglob('*(-)*'):    
-    if os.path.isfile(file):      #这里判断下，如果是文件夹就先不删
-        os.remove(file)
+# 这里不得不感慨，Python的
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-30
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/JlexZhong/jun.geovbox.com.git/categories/python/" class="post-category">
+                                    python
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
 
-参考：
-https://www.jianshu.com/p/17ae57c19d1d
-</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/JlexZhong/jun.geovbox.com.git/2021/08/30/pyqt5-QSS-qdarkstyle/" title="pyqt5小记| QSS开源暗黑主题qdarkstyle ，读取QSS主题文件">     <img class="post_bg" src="https://up.enterdesk.com/edpic_source/b5/11/20/b511208bdc860c02baf3f1fcf4c5c6c0.jpg" onerror="this.onerror=null;this.src='/JlexZhong/jun.geovbox.com.git/img/404.jpg'" alt="pyqt5小记| QSS开源暗黑主题qdarkstyle ，读取QSS主题文件"></a></div><div class="recent-post-info"><a class="article-title" href="/JlexZhong/jun.geovbox.com.git/2021/08/30/pyqt5-QSS-qdarkstyle/" title="pyqt5小记| QSS开源暗黑主题qdarkstyle ，读取QSS主题文件">pyqt5小记| QSS开源暗黑主题qdarkstyle ，读取QSS主题文件</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-08-30T15:17:11.000Z" title="发表于 2021-08-30 23:17:11">2021-08-30</time></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/JlexZhong/jun.geovbox.com.git/tags/PyQt/">PyQt</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/JlexZhong/jun.geovbox.com.git/tags/GUI/">GUI</a></span></div><div class="content">pyqt5小记| QSS开源暗黑主题qdarkstyle ，读取QSS主题文件安装Pip install qdarkstyle
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/JlexZhong/jun.geovbox.com.git/tags/python/">
+                            <span class="chip bg-color">python</span>
+                        </a>
+                        
+                        <a href="/JlexZhong/jun.geovbox.com.git/tags/%E7%AE%97%E6%B3%95/">
+                            <span class="chip bg-color">算法</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/JlexZhong/jun.geovbox.com.git/2021/08/30/pyqt5-QSS-qdarkstyle/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/JlexZhong/jun.geovbox.com.git/medias/featureimages/18.jpg" class="responsive-img" alt="pyqt5小记| QSS开源暗黑主题qdarkstyle ，读取QSS主题文件">
+                            
+                            <span class="card-title">pyqt5小记| QSS开源暗黑主题qdarkstyle ，读取QSS主题文件</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                pyqt5小记| QSS开源暗黑主题qdarkstyle ，读取QSS主题文件安装Pip install qdarkstyle
 
 使用import sys
 from PyQt5.QtGui import QIcon
-import qdarkstyle
-from PyQt5 import QtCore
-from PyQt5.QtWidgets import QApplication,  QMainWindow
+import qdark
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-30
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-user fa-fw"></i>
+                                钟军
+                                
+                            </span>
+                        </div>
+                    </div>
 
-if __name__ == '__main__':
-    app = QApplication(sys.argv)
-    app.setAttribute(QtCore.Qt.AA_EnableHighDpiScaling)  # 适应高分辨率
-    # qdarkstyle
-    # 设置qdarkstyle！！！
-    app.setStyleSheet(qdarkstyle.load_stylesheet())
-    #
-	myMainWindow = QMainWindow()
-    myUi = wMain.Ui_MainWindow()
-    myU ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/JlexZhong/jun.geovbox.com.git/2021/08/30/pyqt5-setWindowTitle/" title="pyqt5 setWindowTitle 设置窗口标题失效解决办法">     <img class="post_bg" src="https://up.enterdesk.com/edpic_source/82/4e/52/824e528e28ea67355f328982cba13f66.jpg" onerror="this.onerror=null;this.src='/JlexZhong/jun.geovbox.com.git/img/404.jpg'" alt="pyqt5 setWindowTitle 设置窗口标题失效解决办法"></a></div><div class="recent-post-info"><a class="article-title" href="/JlexZhong/jun.geovbox.com.git/2021/08/30/pyqt5-setWindowTitle/" title="pyqt5 setWindowTitle 设置窗口标题失效解决办法">pyqt5 setWindowTitle 设置窗口标题失效解决办法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-08-30T15:16:45.000Z" title="发表于 2021-08-30 23:16:45">2021-08-30</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/JlexZhong/jun.geovbox.com.git/categories/PyQt/">PyQt</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/JlexZhong/jun.geovbox.com.git/tags/PyQt/">PyQt</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/JlexZhong/jun.geovbox.com.git/tags/GUI/">GUI</a></span></div><div class="content">pyqt5 setWindowTitle 设置窗口标题失效解决办法myMainWindow = QMainWindow()
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/JlexZhong/jun.geovbox.com.git/tags/PyQt/">
+                            <span class="chip bg-color">PyQt</span>
+                        </a>
+                        
+                        <a href="/JlexZhong/jun.geovbox.com.git/tags/GUI/">
+                            <span class="chip bg-color">GUI</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/JlexZhong/jun.geovbox.com.git/2021/08/30/pyqt5-setWindowTitle/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/JlexZhong/jun.geovbox.com.git/medias/featureimages/14.jpg" class="responsive-img" alt="pyqt5 setWindowTitle 设置窗口标题失效解决办法">
+                            
+                            <span class="card-title">pyqt5 setWindowTitle 设置窗口标题失效解决办法</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                pyqt5 setWindowTitle 设置窗口标题失效解决办法myMainWindow = QMainWindow()
 myUi = wMain.Ui_MainWindow()
 myUi.setupUi(myMainWindow)
-myMainWindow.setWindowTitle('ZDEMViewer    离散元数值模拟可视化程序')
-myMainWindow.setWindowIcon(QIcon("./icons/logo.ico"))
-myMainWindow.show()
+my
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-30
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/JlexZhong/jun.geovbox.com.git/categories/PyQt/" class="post-category">
+                                    PyQt
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
 
-如上所示的设置顺序可以成功
-如果是：
-myMainWindow = QMainWindow()
-myMainWindow.setWindowTitle('ZDEMViewer    离散元数值模拟可视化程序')
-myMainWindow.setWindowIcon(QIcon("./icons/logo.ico"))
-myUi = wMain.Ui_MainWindow()
-myUi.setupUi(myMainWindow)
-myMainWindow.show()
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/JlexZhong/jun.geovbox.com.git/tags/PyQt/">
+                            <span class="chip bg-color">PyQt</span>
+                        </a>
+                        
+                        <a href="/JlexZhong/jun.geovbox.com.git/tags/GUI/">
+                            <span class="chip bg-color">GUI</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/JlexZhong/jun.geovbox.com.git/2021/08/30/pyqtgraph-to-pyqt-background-axes-square/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/JlexZhong/jun.geovbox.com.git/medias/featureimages/16.jpg" class="responsive-img" alt="pyqtgraph嵌入pyqt界面中 | 修改pyqtgraph背景颜色 | 坐标轴等比例缩放">
+                            
+                            <span class="card-title">pyqtgraph嵌入pyqt界面中 | 修改pyqtgraph背景颜色 | 坐标轴等比例缩放</span>
+                        </div>
+                    </a>
 
-会出现图标能够生效，但是 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/JlexZhong/jun.geovbox.com.git/2021/08/30/pyqtgraph-to-pyqt-background-axes-square/" title="pyqtgraph嵌入pyqt界面中 | 修改pyqtgraph背景颜色 | 坐标轴等比例缩放">     <img class="post_bg" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/JlexZhong/jun.geovbox.com.git/img/404.jpg'" alt="pyqtgraph嵌入pyqt界面中 | 修改pyqtgraph背景颜色 | 坐标轴等比例缩放"></a></div><div class="recent-post-info"><a class="article-title" href="/JlexZhong/jun.geovbox.com.git/2021/08/30/pyqtgraph-to-pyqt-background-axes-square/" title="pyqtgraph嵌入pyqt界面中 | 修改pyqtgraph背景颜色 | 坐标轴等比例缩放">pyqtgraph嵌入pyqt界面中 | 修改pyqtgraph背景颜色 | 坐标轴等比例缩放</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-08-30T15:16:16.000Z" title="发表于 2021-08-30 23:16:16">2021-08-30</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/JlexZhong/jun.geovbox.com.git/categories/PyQt/">PyQt</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/JlexZhong/jun.geovbox.com.git/tags/PyQt/">PyQt</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/JlexZhong/jun.geovbox.com.git/tags/GUI/">GUI</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/JlexZhong/jun.geovbox.com.git/tags/pyqtgraph/">pyqtgraph</a></span></div><div class="content">pyqtgraph嵌入pyqt界面中 | 修改pyqtgraph背景颜色 | 坐标轴等比例缩放class pyqtgraph_widget(QWidget):
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                pyqtgraph嵌入pyqt界面中 | 修改pyqtgraph背景颜色 | 坐标轴等比例缩放class pyqtgraph_widget(QWidget):
     """将pyqtgraph嵌入到pyqt界面中
 
     Args:
-        QWidget ([type]): 基于QWidget组件
-    """
+ 
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-30
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/JlexZhong/jun.geovbox.com.git/categories/PyQt/" class="post-category">
+                                    PyQt
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
 
-    def __init__(self, parent=None):
-        """
-        :param parent: 父组件
-        """
-       
-        QWidget.__init__(self, parent)
-        # 创建垂直布局
-        self.layout = QtWidgets.QVBoxLayout(self)
-        self.layout.setObjectName('layout')
-        self.layout.setContentsMargins(0,0,0,0)
-        # 修改背景颜色
-        pg.setConfigOpt ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/JlexZhong/jun.geovbox.com.git/2021/08/30/pyqt-listbar-QListWidget+QStackedWidget/" title="pyqt小记|侧边栏（QListWidget+QStackedWidget）实现">     <img class="post_bg" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/JlexZhong/jun.geovbox.com.git/img/404.jpg'" alt="pyqt小记|侧边栏（QListWidget+QStackedWidget）实现"></a></div><div class="recent-post-info"><a class="article-title" href="/JlexZhong/jun.geovbox.com.git/2021/08/30/pyqt-listbar-QListWidget+QStackedWidget/" title="pyqt小记|侧边栏（QListWidget+QStackedWidget）实现">pyqt小记|侧边栏（QListWidget+QStackedWidget）实现</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-08-30T15:13:54.000Z" title="发表于 2021-08-30 23:13:54">2021-08-30</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/JlexZhong/jun.geovbox.com.git/categories/PyQt/">PyQt</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/JlexZhong/jun.geovbox.com.git/tags/PyQt/">PyQt</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/JlexZhong/jun.geovbox.com.git/tags/GUI/">GUI</a></span></div><div class="content">pyqt小记|侧边栏（QListWidget+QStackedWidget）实现效果![](https://cdn.jsdelivr.net/gh/JlexZhong/J.CS-note@main/pyqt小记侧边栏（QListWidget+QStackedWidget）实现.assets/2021-08-19 112919.png)
-思路
-左边是listwidget，右边是stackedwidget。
-点击listwidget的不同item，跳转到stackedwidget不同的页面。
-最后通过qss美化。
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/JlexZhong/jun.geovbox.com.git/tags/PyQt/">
+                            <span class="chip bg-color">PyQt</span>
+                        </a>
+                        
+                        <a href="/JlexZhong/jun.geovbox.com.git/tags/GUI/">
+                            <span class="chip bg-color">GUI</span>
+                        </a>
+                        
+                        <a href="/JlexZhong/jun.geovbox.com.git/tags/pyqtgraph/">
+                            <span class="chip bg-color">pyqtgraph</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/JlexZhong/jun.geovbox.com.git/2021/08/30/pyqt-listbar-QListWidget+QStackedWidget/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/JlexZhong/jun.geovbox.com.git/medias/featureimages/23.jpg" class="responsive-img" alt="pyqt小记|侧边栏（QListWidget+QStackedWidget）实现">
+                            
+                            <span class="card-title">pyqt小记|侧边栏（QListWidget+QStackedWidget）实现</span>
+                        </div>
+                    </a>
 
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                pyqt小记|侧边栏（QListWidget+QStackedWidget）实现效果![](https://cdn.jsdelivr.net/gh/JlexZhong/J.CS-note@main/pyqt小记侧边栏（QListWidget
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-30
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/JlexZhong/jun.geovbox.com.git/categories/PyQt/" class="post-category">
+                                    PyQt
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
 
-实现初始化界面def init_leftWidget(self):
-    # self.leftFrame是父组件
-    self.leftFrame_HLayout = QtWidgets.QHBoxLayout(self.leftFrame)
-   	self.leftFrame_HLayout.setSpacing(0)  
-  	self.leftFrame_HLayout.setContentsMargins(0,0,0,0) 
-  	self.leftFram ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/JlexZhong/jun.geovbox.com.git/2021/08/30/pyqy-compose-gif-to-gui/" title="pyqy小记|生成gif并嵌入到GUI中">     <img class="post_bg" src="https://up.enterdesk.com/edpic_source/b5/11/20/b511208bdc860c02baf3f1fcf4c5c6c0.jpg" onerror="this.onerror=null;this.src='/JlexZhong/jun.geovbox.com.git/img/404.jpg'" alt="pyqy小记|生成gif并嵌入到GUI中"></a></div><div class="recent-post-info"><a class="article-title" href="/JlexZhong/jun.geovbox.com.git/2021/08/30/pyqy-compose-gif-to-gui/" title="pyqy小记|生成gif并嵌入到GUI中">pyqy小记|生成gif并嵌入到GUI中</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-08-30T15:13:27.000Z" title="发表于 2021-08-30 23:13:27">2021-08-30</time></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/JlexZhong/jun.geovbox.com.git/tags/PyQt/">PyQt</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/JlexZhong/jun.geovbox.com.git/tags/GUI/">GUI</a></span></div><div class="content">pyqy小记|生成gif并嵌入到GUI中生成gif，嵌入到标签QLabel中def compose_gif(self):
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/JlexZhong/jun.geovbox.com.git/tags/PyQt/">
+                            <span class="chip bg-color">PyQt</span>
+                        </a>
+                        
+                        <a href="/JlexZhong/jun.geovbox.com.git/tags/GUI/">
+                            <span class="chip bg-color">GUI</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/JlexZhong/jun.geovbox.com.git/2021/08/30/pyqy-compose-gif-to-gui/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/JlexZhong/jun.geovbox.com.git/medias/featureimages/12.jpg" class="responsive-img" alt="pyqy小记|生成gif并嵌入到GUI中">
+                            
+                            <span class="card-title">pyqy小记|生成gif并嵌入到GUI中</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                pyqy小记|生成gif并嵌入到GUI中生成gif，嵌入到标签QLabel中def compose_gif(self):
  	"""生成gif
  	"""
     jpgPath_List = []
     # 读取图片集
-    jpgList = os.listdir("./temp save files")  # 参数是图片集存放的路径，返回该路径下的所有文件名
-    for jpgName in jpgList:
-        absolutePath = os.path.join("./temp save files/", jpgName)  # 拼接成绝对路径
-        jpgPath_List.append(absolutePath)
-    gif_images = []
-    # 读取单个图片，将数据存入列表中
-    for path in jpgPath_List:
-        gif_images.append(imageio.imread(path))
-    #保存为gif，fps=2
-    imageio.mimsave("./temp  ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/JlexZhong/jun.geovbox.com.git/2021/08/30/tomotoes_blog/" title="🎃一个坏掉的番茄个人主页——魔改教程、遇坑总结">     <img class="post_bg" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/JlexZhong/jun.geovbox.com.git/img/404.jpg'" alt="🎃一个坏掉的番茄个人主页——魔改教程、遇坑总结"></a></div><div class="recent-post-info"><a class="article-title" href="/JlexZhong/jun.geovbox.com.git/2021/08/30/tomotoes_blog/" title="🎃一个坏掉的番茄个人主页——魔改教程、遇坑总结">🎃一个坏掉的番茄个人主页——魔改教程、遇坑总结</a><div class="article-meta-wrap"><span class="article-meta"><i class="fas fa-thumbtack sticky"></i><span class="sticky">置顶</span><span class="article-meta__separator">|</span></span><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-08-30T10:09:42.000Z" title="发表于 2021-08-30 18:09:42">2021-08-30</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/JlexZhong/jun.geovbox.com.git/categories/hexo/">hexo</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/JlexZhong/jun.geovbox.com.git/tags/hexo/">hexo</a></span></div><div class="content">🎃一个坏掉的番茄个人主页——魔改教程、遇坑总结！</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/JlexZhong/jun.geovbox.com.git/2021/08/29/pyqt-matplotlib-to-pyqt-add-toolbar-matplotlib-save-too-slowly/" title="pyqt小记|matplotlib嵌入pyqt界面|添加工具条 | matplotlib保存太慢解决方法">     <img class="post_bg" src="https://up.enterdesk.com/edpic_source/82/4e/52/824e528e28ea67355f328982cba13f66.jpg" onerror="this.onerror=null;this.src='/JlexZhong/jun.geovbox.com.git/img/404.jpg'" alt="pyqt小记|matplotlib嵌入pyqt界面|添加工具条 | matplotlib保存太慢解决方法"></a></div><div class="recent-post-info"><a class="article-title" href="/JlexZhong/jun.geovbox.com.git/2021/08/29/pyqt-matplotlib-to-pyqt-add-toolbar-matplotlib-save-too-slowly/" title="pyqt小记|matplotlib嵌入pyqt界面|添加工具条 | matplotlib保存太慢解决方法">pyqt小记|matplotlib嵌入pyqt界面|添加工具条 | matplotlib保存太慢解决方法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-08-29T15:14:23.000Z" title="发表于 2021-08-29 23:14:23">2021-08-29</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/JlexZhong/jun.geovbox.com.git/categories/PyQt/">PyQt</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/JlexZhong/jun.geovbox.com.git/tags/PyQt/">PyQt</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/JlexZhong/jun.geovbox.com.git/tags/GUI/">GUI</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/JlexZhong/jun.geovbox.com.git/tags/matplotlib/">matplotlib</a></span></div><div class="content">pyqt小记</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/JlexZhong/jun.geovbox.com.git/2021/08/29/HTML-note/" title="HTML学习笔记">     <img class="post_bg" src="https://up.enterdesk.com/edpic_source/b5/11/20/b511208bdc860c02baf3f1fcf4c5c6c0.jpg" onerror="this.onerror=null;this.src='/JlexZhong/jun.geovbox.com.git/img/404.jpg'" alt="HTML学习笔记"></a></div><div class="recent-post-info"><a class="article-title" href="/JlexZhong/jun.geovbox.com.git/2021/08/29/HTML-note/" title="HTML学习笔记">HTML学习笔记</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-08-29T04:22:09.000Z" title="发表于 2021-08-29 12:22:09">2021-08-29</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/JlexZhong/jun.geovbox.com.git/categories/HTML/">HTML</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/JlexZhong/jun.geovbox.com.git/tags/HTML/">HTML</a></span></div><div class="content">记录一下学习HTML中的问题</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/JlexZhong/jun.geovbox.com.git/2021/08/27/pyqt-shadow-frameless/" title="pyqt小记|窗口阴影、透明、无边框">     <img class="post_bg" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/JlexZhong/jun.geovbox.com.git/img/404.jpg'" alt="pyqt小记|窗口阴影、透明、无边框"></a></div><div class="recent-post-info"><a class="article-title" href="/JlexZhong/jun.geovbox.com.git/2021/08/27/pyqt-shadow-frameless/" title="pyqt小记|窗口阴影、透明、无边框">pyqt小记|窗口阴影、透明、无边框</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-08-27T15:14:23.000Z" title="发表于 2021-08-27 23:14:23">2021-08-27</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/JlexZhong/jun.geovbox.com.git/categories/PyQt/">PyQt</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/JlexZhong/jun.geovbox.com.git/tags/PyQt/">PyQt</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/JlexZhong/jun.geovbox.com.git/tags/GUI/">GUI</a></span></div><div class="content">pyqt小记|窗口阴影、透明、无边框</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/JlexZhong/jun.geovbox.com.git/2021/08/23/Building-a-Blog/" title="Hexo+Github+matery免费搭建个人博客教程">     <img class="post_bg" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/JlexZhong/jun.geovbox.com.git/img/404.jpg'" alt="Hexo+Github+matery免费搭建个人博客教程"></a></div><div class="recent-post-info"><a class="article-title" href="/JlexZhong/jun.geovbox.com.git/2021/08/23/Building-a-Blog/" title="Hexo+Github+matery免费搭建个人博客教程">Hexo+Github+matery免费搭建个人博客教程</a><div class="article-meta-wrap"><span class="article-meta"><i class="fas fa-thumbtack sticky"></i><span class="sticky">置顶</span><span class="article-meta__separator">|</span></span><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-08-23T04:22:09.000Z" title="发表于 2021-08-23 12:22:09">2021-08-23</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/JlexZhong/jun.geovbox.com.git/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">博客搭建</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/JlexZhong/jun.geovbox.com.git/tags/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">搭建博客</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/JlexZhong/jun.geovbox.com.git/tags/hexo/">hexo</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/JlexZhong/jun.geovbox.com.git/tags/github/">github</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/JlexZhong/jun.geovbox.com.git/tags/matery/">matery</a></span></div><div class="content">记录一下自建博客的心路历程，使用Hexo+Github搭建个人博客，快进来看看吧！</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/JlexZhong/jun.geovbox.com.git/2021/08/19/inception-resnet-v2-Parameter-optimization-note/" title="inception-resnet-v2超参数优化笔记">     <img class="post_bg" src="https://up.enterdesk.com/edpic_source/d0/5a/0f/d05a0fd216fbf0de1c081841b8875f46.jpg" onerror="this.onerror=null;this.src='/JlexZhong/jun.geovbox.com.git/img/404.jpg'" alt="inception-resnet-v2超参数优化笔记"></a></div><div class="recent-post-info"><a class="article-title" href="/JlexZhong/jun.geovbox.com.git/2021/08/19/inception-resnet-v2-Parameter-optimization-note/" title="inception-resnet-v2超参数优化笔记">inception-resnet-v2超参数优化笔记</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-08-19T10:00:09.000Z" title="发表于 2021-08-19 18:00:09">2021-08-19</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/JlexZhong/jun.geovbox.com.git/categories/%E5%9B%BE%E5%83%8F%E5%88%86%E7%B1%BB/">图像分类</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/JlexZhong/jun.geovbox.com.git/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/JlexZhong/jun.geovbox.com.git/tags/tensorflow/">tensorflow</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/JlexZhong/jun.geovbox.com.git/tags/keras/">keras</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/JlexZhong/jun.geovbox.com.git/tags/%E5%9B%BE%E5%83%8F%E5%88%86%E7%B1%BB/">图像分类</a></span></div><div class="content">记录一下inception-resnet-v2超参数优化的记录，accuracy、loss、学习率、优化器</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/JlexZhong/jun.geovbox.com.git/2021/08/17/pyqt-context-add-icon-click/" title="pyqt小记 | 添加右键菜单，添加图标和点击事件">     <img class="post_bg" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/JlexZhong/jun.geovbox.com.git/img/404.jpg'" alt="pyqt小记 | 添加右键菜单，添加图标和点击事件"></a></div><div class="recent-post-info"><a class="article-title" href="/JlexZhong/jun.geovbox.com.git/2021/08/17/pyqt-context-add-icon-click/" title="pyqt小记 | 添加右键菜单，添加图标和点击事件">pyqt小记 | 添加右键菜单，添加图标和点击事件</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-08-17T15:12:35.000Z" title="发表于 2021-08-17 23:12:35">2021-08-17</time></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/JlexZhong/jun.geovbox.com.git/tags/PyQt/">PyQt</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/JlexZhong/jun.geovbox.com.git/tags/GUI/">GUI</a></span></div><div class="content">pyqt小记 | 添加右键菜单，添加图标和点击事件def contextMenuEvent(self, pos):
+    jpgL
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-30
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-user fa-fw"></i>
+                                钟军
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/JlexZhong/jun.geovbox.com.git/tags/PyQt/">
+                            <span class="chip bg-color">PyQt</span>
+                        </a>
+                        
+                        <a href="/JlexZhong/jun.geovbox.com.git/tags/GUI/">
+                            <span class="chip bg-color">GUI</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/JlexZhong/jun.geovbox.com.git/2021/08/30/tomotoes_blog/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/JlexZhong/jun.geovbox.com.git/medias/featureimages/15.jpg" class="responsive-img" alt="🎃一个坏掉的番茄个人主页——魔改教程、遇坑总结">
+                            
+                            <span class="card-title">🎃一个坏掉的番茄个人主页——魔改教程、遇坑总结</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                🎃一个坏掉的番茄个人主页——魔改教程、遇坑总结主页模板地址：https://github.com/Tomotoes/HomePage
+中文使用文档：https://github.com/Tomotoes/HomePage/blob/mas
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-30
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/JlexZhong/jun.geovbox.com.git/categories/hexo/" class="post-category">
+                                    hexo
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/JlexZhong/jun.geovbox.com.git/tags/hexo/">
+                            <span class="chip bg-color">hexo</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/JlexZhong/jun.geovbox.com.git/2021/08/29/pyqt-matplotlib-to-pyqt-add-toolbar-matplotlib-save-too-slowly/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/JlexZhong/jun.geovbox.com.git/medias/featureimages/3.jpg" class="responsive-img" alt="pyqt小记|matplotlib嵌入pyqt界面|添加工具条 | matplotlib保存太慢解决方法">
+                            
+                            <span class="card-title">pyqt小记|matplotlib嵌入pyqt界面|添加工具条 | matplotlib保存太慢解决方法</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                pyqt小记|matplotlib嵌入pyqt界面|添加工具条 | matplotlib保存太慢解决方法上源码：
+from PyQt5 import QtWidgets
+from matplotlib.figure import Figur
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-29
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/JlexZhong/jun.geovbox.com.git/categories/PyQt/" class="post-category">
+                                    PyQt
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/JlexZhong/jun.geovbox.com.git/tags/PyQt/">
+                            <span class="chip bg-color">PyQt</span>
+                        </a>
+                        
+                        <a href="/JlexZhong/jun.geovbox.com.git/tags/GUI/">
+                            <span class="chip bg-color">GUI</span>
+                        </a>
+                        
+                        <a href="/JlexZhong/jun.geovbox.com.git/tags/matplotlib/">
+                            <span class="chip bg-color">matplotlib</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/JlexZhong/jun.geovbox.com.git/2021/08/29/HTML-note/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/JlexZhong/jun.geovbox.com.git/medias/featureimages/1.jpg" class="responsive-img" alt="HTML学习笔记">
+                            
+                            <span class="card-title">HTML学习笔记</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                HTML 学习笔记&lt;li&gt;定义列表。
+““：有序列表；
+““：无序列表。
+&lt;a&gt;定义超链接
+id,name,class的理解
+id、name、class属性是什么？
+
+id是html页面中元素的唯一标示，属性值在页面
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-29
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/JlexZhong/jun.geovbox.com.git/categories/HTML/" class="post-category">
+                                    HTML
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/JlexZhong/jun.geovbox.com.git/tags/HTML/">
+                            <span class="chip bg-color">HTML</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/JlexZhong/jun.geovbox.com.git/2021/08/27/pyqt-shadow-frameless/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/JlexZhong/jun.geovbox.com.git/medias/featureimages/4.jpg" class="responsive-img" alt="pyqt小记|窗口阴影、透明、无边框">
+                            
+                            <span class="card-title">pyqt小记|窗口阴影、透明、无边框</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                pyqt小记|窗口阴影、透明、无边框# 设置无边框圆角带阴影窗口
+self.MainWindow.setWindowFlag(QtCore.Qt.FramelessWindowHint)  # 无边框
+# ===============透明
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-27
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/JlexZhong/jun.geovbox.com.git/categories/PyQt/" class="post-category">
+                                    PyQt
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/JlexZhong/jun.geovbox.com.git/tags/PyQt/">
+                            <span class="chip bg-color">PyQt</span>
+                        </a>
+                        
+                        <a href="/JlexZhong/jun.geovbox.com.git/tags/GUI/">
+                            <span class="chip bg-color">GUI</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/JlexZhong/jun.geovbox.com.git/2021/08/23/Building-a-Blog/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/JlexZhong/jun.geovbox.com.git/medias/featureimages/16.jpg" class="responsive-img" alt="Hexo+Github+matery免费搭建个人博客教程">
+                            
+                            <span class="card-title">Hexo+Github+matery免费搭建个人博客教程</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                Hexo+Github免费搭建个人博客详细教程效果图
+
+
+安装安装Node.js安装Node.js，一直默认。输入：（查看是否安装正确）
+
+```node -v
+
+- 添加环境变量：**C:\Program Files\nodejs\ **
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-23
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/JlexZhong/jun.geovbox.com.git/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="post-category">
+                                    博客搭建
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/JlexZhong/jun.geovbox.com.git/tags/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">
+                            <span class="chip bg-color">搭建博客</span>
+                        </a>
+                        
+                        <a href="/JlexZhong/jun.geovbox.com.git/tags/hexo/">
+                            <span class="chip bg-color">hexo</span>
+                        </a>
+                        
+                        <a href="/JlexZhong/jun.geovbox.com.git/tags/github/">
+                            <span class="chip bg-color">github</span>
+                        </a>
+                        
+                        <a href="/JlexZhong/jun.geovbox.com.git/tags/matery/">
+                            <span class="chip bg-color">matery</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/JlexZhong/jun.geovbox.com.git/2021/08/19/inception-resnet-v2-Parameter-optimization-note/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/JlexZhong/jun.geovbox.com.git/medias/featureimages/23.jpg" class="responsive-img" alt="inception-resnet-v2超参数优化笔记">
+                            
+                            <span class="card-title">inception-resnet-v2超参数优化笔记</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                inception-resnet-v2优化笔记csdn岩石数据集1   image_size = 299
+   batch_size = 32
+   num_train = 250
+   num_val = 50
+   epochs = 3
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-19
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/JlexZhong/jun.geovbox.com.git/categories/%E5%9B%BE%E5%83%8F%E5%88%86%E7%B1%BB/" class="post-category">
+                                    图像分类
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/JlexZhong/jun.geovbox.com.git/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
+                            <span class="chip bg-color">深度学习</span>
+                        </a>
+                        
+                        <a href="/JlexZhong/jun.geovbox.com.git/tags/tensorflow/">
+                            <span class="chip bg-color">tensorflow</span>
+                        </a>
+                        
+                        <a href="/JlexZhong/jun.geovbox.com.git/tags/keras/">
+                            <span class="chip bg-color">keras</span>
+                        </a>
+                        
+                        <a href="/JlexZhong/jun.geovbox.com.git/tags/%E5%9B%BE%E5%83%8F%E5%88%86%E7%B1%BB/">
+                            <span class="chip bg-color">图像分类</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/JlexZhong/jun.geovbox.com.git/2021/08/17/pyqt-context-add-icon-click/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/JlexZhong/jun.geovbox.com.git/medias/featureimages/7.jpg" class="responsive-img" alt="pyqt小记 | 添加右键菜单，添加图标和点击事件">
+                            
+                            <span class="card-title">pyqt小记 | 添加右键菜单，添加图标和点击事件</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                pyqt小记 | 添加右键菜单，添加图标和点击事件def contextMenuEvent(self, pos):
     """
 
     右键菜单
     :param pos:
     :return:
     """
-    self.contextMenu = QMenu()
-    self.action_pgPlot = self.contextMenu.addAction(
-        QIcon("./icons/logo.ico"), u'| 使用PyqtGraph绘制散点图')
-    self.action_plotCircle = self.contextMenu.addAction(
-        QIcon("./icons/plot.ico"), u'| 使用matplotlib绘制二维圆图')
-    self.action_plotPoint = self.contextMenu.addAction(
-        QIcon("./icons/plotPoint.png"), u'| 使用matplotlib绘制散点图')
-    self ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/JlexZhong/jun.geovbox.com.git/2021/08/15/tensorflow2-load-save/" title="tensorflow2 模型的保存和载入 h5和ckpt的用法 断点续训">     <img class="post_bg" src="https://up.enterdesk.com/edpic_source/b5/11/20/b511208bdc860c02baf3f1fcf4c5c6c0.jpg" onerror="this.onerror=null;this.src='/JlexZhong/jun.geovbox.com.git/img/404.jpg'" alt="tensorflow2 模型的保存和载入 h5和ckpt的用法 断点续训"></a></div><div class="recent-post-info"><a class="article-title" href="/JlexZhong/jun.geovbox.com.git/2021/08/15/tensorflow2-load-save/" title="tensorflow2 模型的保存和载入 h5和ckpt的用法 断点续训">tensorflow2 模型的保存和载入 h5和ckpt的用法 断点续训</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-08-15T04:00:09.000Z" title="发表于 2021-08-15 12:00:09">2021-08-15</time></span><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/JlexZhong/jun.geovbox.com.git/categories/tensorflow/">tensorflow</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/JlexZhong/jun.geovbox.com.git/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/JlexZhong/jun.geovbox.com.git/tags/tensorflow/">tensorflow</a></span></div><div class="content">tensorflow2 模型的保存和载入 h5和ckpt的用法 断点续训</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/JlexZhong/jun.geovbox.com.git/2021/08/13/first_blog/" title="我的第一篇博客">     <img class="post_bg" src="https://up.enterdesk.com/edpic_source/82/4e/52/824e528e28ea67355f328982cba13f66.jpg" onerror="this.onerror=null;this.src='/JlexZhong/jun.geovbox.com.git/img/404.jpg'" alt="我的第一篇博客"></a></div><div class="recent-post-info"><a class="article-title" href="/JlexZhong/jun.geovbox.com.git/2021/08/13/first_blog/" title="我的第一篇博客">我的第一篇博客</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-08-13T14:42:55.000Z" title="发表于 2021-08-13 22:42:55">2021-08-13</time></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/JlexZhong/jun.geovbox.com.git/tags/%E7%94%9F%E6%B4%BB/">生活</a></span></div><div class="content">大家好，这是我的第一篇博客，见证了自建个人博客的成功。
+    sel
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-17
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-user fa-fw"></i>
+                                钟军
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/JlexZhong/jun.geovbox.com.git/tags/PyQt/">
+                            <span class="chip bg-color">PyQt</span>
+                        </a>
+                        
+                        <a href="/JlexZhong/jun.geovbox.com.git/tags/GUI/">
+                            <span class="chip bg-color">GUI</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/JlexZhong/jun.geovbox.com.git/2021/08/15/tensorflow2-load-save/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/JlexZhong/jun.geovbox.com.git/medias/featureimages/14.jpg" class="responsive-img" alt="tensorflow2 模型的保存和载入 h5和ckpt的用法 断点续训">
+                            
+                            <span class="card-title">tensorflow2 模型的保存和载入 h5和ckpt的用法 断点续训</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                tensorflow2 模型的保存和载入 h5和ckpt的用法 | 小记断点续训/检查点# 断点续训
+checkpoint_path = 'ckpt/transfer_{epoch:02d}-{val_acc:.2f}.ckpt'  # 格
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-15
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/JlexZhong/jun.geovbox.com.git/categories/tensorflow/" class="post-category">
+                                    tensorflow
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/JlexZhong/jun.geovbox.com.git/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
+                            <span class="chip bg-color">深度学习</span>
+                        </a>
+                        
+                        <a href="/JlexZhong/jun.geovbox.com.git/tags/tensorflow/">
+                            <span class="chip bg-color">tensorflow</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/JlexZhong/jun.geovbox.com.git/2021/08/13/first_blog/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/JlexZhong/jun.geovbox.com.git/medias/featureimages/16.jpg" class="responsive-img" alt="我的第一篇博客">
+                            
+                            <span class="card-title">我的第一篇博客</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                大家好，这是我的第一篇博客，见证了自建个人博客的成功。
 接下来，我将在这里发布我的学习记录和问题，以及一些项目，敬请期待！
 本人非科班选手，如有不足还望各位指正哦！
-</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/JlexZhong/jun.geovbox.com.git/img/avatar.png" onerror="this.onerror=null;this.src='/JlexZhong/jun.geovbox.com.git/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">钟军</div><div class="author-info__description">AI,Deep Learning,CV.</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/JlexZhong/jun.geovbox.com.git/archives/"><div class="headline">文章</div><div class="length-num">22</div></a></div><div class="card-info-data-item is-center"><a href="/JlexZhong/jun.geovbox.com.git/tags/"><div class="headline">标签</div><div class="length-num">21</div></a></div><div class="card-info-data-item is-center"><a href="/JlexZhong/jun.geovbox.com.git/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div></div><a class="button--animated" id="card-info-btn" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/JlexZhong" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:junzhong0917@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2678091501&amp;site=qq&amp;menu=yes" target="_blank" title="QQ"><i class="iconfont icon-QQ"></i></a><a class="social-icon" href="https://mp.weixin.qq.com/mp/profile_ext?action=home&amp;__biz=Mzg4MzY0ODExMw==&amp;scene=124&amp;uin=&amp;key=&amp;devicetype=Windows+10+x64&amp;version=63030522&amp;lang=zh_CN&amp;a8scene=7&amp;fontgear=2" target="_blank" title="微信"><i class="iconfont icon-weixin"></i></a><a class="social-icon" href="https://www.zhihu.com/people/jiang-lang-cai-jin-de-jiang-jin" target="_blank" title="知乎"><i class="iconfont icon-shejiaotubiao-46"></i></a><a class="social-icon" href="https://space.bilibili.com/545306558" target="_blank" title="哔哩哔哩"><i class="iconfont icon-icon_bilibili-circle"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">欢迎━(*｀∀´*)ノ亻!</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/JlexZhong/jun.geovbox.com.git/2021/09/17/(Mask-R-CNN)-AssertionError-in%20run_graph()/" title="(Mask R-CNN) AssertionError when I run inspect_model.py in run_graph()">(Mask R-CNN) AssertionError when I run inspect_model.py in run_graph()</a><time datetime="2021-09-17T10:00:09.000Z" title="发表于 2021-09-17 18:00:09">2021-09-17</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/JlexZhong/jun.geovbox.com.git/2021/09/11/solve-tensorboard-1.13.1-cannot-open-url/" title="解决tensorboard 1.13.1 无法打开生成的网址">解决tensorboard 1.13.1 无法打开生成的网址</a><time datetime="2021-09-11T14:00:09.000Z" title="发表于 2021-09-11 22:00:09">2021-09-11</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/JlexZhong/jun.geovbox.com.git/2021/09/11/python_BUG/" title="python开发中遇到的原生问题">python开发中遇到的原生问题</a><time datetime="2021-09-11T04:00:09.000Z" title="发表于 2021-09-11 12:00:09">2021-09-11</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/JlexZhong/jun.geovbox.com.git/2021/09/09/mask_rcnn-bug-note/" title="mask r-cnn 遇到的坑">mask r-cnn 遇到的坑</a><time datetime="2021-09-09T04:00:09.000Z" title="发表于 2021-09-09 12:00:09">2021-09-09</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/JlexZhong/jun.geovbox.com.git/2021/09/09/use-Mask-R-CNN-train-dataset-myself/" title="使用Mask-R-CNN训练自己的数据集">使用Mask-R-CNN训练自己的数据集</a><time datetime="2021-09-09T04:00:09.000Z" title="发表于 2021-09-09 12:00:09">2021-09-09</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
-            <i class="fas fa-folder-open"></i>
-            <span>分类</span>
-            <a class="card-more-btn" href="/JlexZhong/jun.geovbox.com.git/categories/" title="查看更多">
-    <i class="fas fa-angle-right"></i></a>
+
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-13
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-user fa-fw"></i>
+                                钟军
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/JlexZhong/jun.geovbox.com.git/tags/%E7%94%9F%E6%B4%BB/">
+                            <span class="chip bg-color">生活</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
             </div>
-            <ul class="card-category-list" id="aside-cat-list">
-            <li class="card-category-list-item "><a class="card-category-list-link" href="/JlexZhong/jun.geovbox.com.git/categories/BUG/"><span class="card-category-list-name">BUG</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/JlexZhong/jun.geovbox.com.git/categories/HTML/"><span class="card-category-list-name">HTML</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/JlexZhong/jun.geovbox.com.git/categories/Mask-R-CNN/"><span class="card-category-list-name">Mask R-CNN</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/JlexZhong/jun.geovbox.com.git/categories/PyQt/"><span class="card-category-list-name">PyQt</span><span class="card-category-list-count">5</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/JlexZhong/jun.geovbox.com.git/categories/Python/"><span class="card-category-list-name">Python</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/JlexZhong/jun.geovbox.com.git/categories/hexo/"><span class="card-category-list-name">hexo</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/JlexZhong/jun.geovbox.com.git/categories/python/"><span class="card-category-list-name">python</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/JlexZhong/jun.geovbox.com.git/categories/tensorflow/"><span class="card-category-list-name">tensorflow</span><span class="card-category-list-count">3</span></a></li>
-            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/JlexZhong/jun.geovbox.com.git/tags/BUG/" style="font-size: 1.2em; color: #999da3">BUG</a> <a href="/JlexZhong/jun.geovbox.com.git/tags/GUI/" style="font-size: 1.5em; color: #99a9bf">GUI</a> <a href="/JlexZhong/jun.geovbox.com.git/tags/HTML/" style="font-size: 1.1em; color: #999">HTML</a> <a href="/JlexZhong/jun.geovbox.com.git/tags/Mask-R-CNN/" style="font-size: 1.3em; color: #99a1ac">Mask R-CNN</a> <a href="/JlexZhong/jun.geovbox.com.git/tags/PyQt/" style="font-size: 1.5em; color: #99a9bf">PyQt</a> <a href="/JlexZhong/jun.geovbox.com.git/tags/Python/" style="font-size: 1.1em; color: #999">Python</a> <a href="/JlexZhong/jun.geovbox.com.git/tags/github/" style="font-size: 1.1em; color: #999">github</a> <a href="/JlexZhong/jun.geovbox.com.git/tags/hexo/" style="font-size: 1.2em; color: #999da3">hexo</a> <a href="/JlexZhong/jun.geovbox.com.git/tags/keras/" style="font-size: 1.4em; color: #99a5b6">keras</a> <a href="/JlexZhong/jun.geovbox.com.git/tags/matery/" style="font-size: 1.1em; color: #999">matery</a> <a href="/JlexZhong/jun.geovbox.com.git/tags/matplotlib/" style="font-size: 1.1em; color: #999">matplotlib</a> <a href="/JlexZhong/jun.geovbox.com.git/tags/pyqtgraph/" style="font-size: 1.1em; color: #999">pyqtgraph</a> <a href="/JlexZhong/jun.geovbox.com.git/tags/python/" style="font-size: 1.1em; color: #999">python</a> <a href="/JlexZhong/jun.geovbox.com.git/tags/tensorflow/" style="font-size: 1.5em; color: #99a9bf">tensorflow</a> <a href="/JlexZhong/jun.geovbox.com.git/tags/tensorflow-js/" style="font-size: 1.1em; color: #999">tensorflow.js</a> <a href="/JlexZhong/jun.geovbox.com.git/tags/%E5%9B%BE%E5%83%8F%E5%88%86%E7%B1%BB/" style="font-size: 1.2em; color: #999da3">图像分类</a> <a href="/JlexZhong/jun.geovbox.com.git/tags/%E5%AE%9E%E4%BE%8B%E5%88%86%E5%89%B2/" style="font-size: 1.2em; color: #999da3">实例分割</a> <a href="/JlexZhong/jun.geovbox.com.git/tags/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" style="font-size: 1.1em; color: #999">搭建博客</a> <a href="/JlexZhong/jun.geovbox.com.git/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" style="font-size: 1.5em; color: #99a9bf">深度学习</a> <a href="/JlexZhong/jun.geovbox.com.git/tags/%E7%94%9F%E6%B4%BB/" style="font-size: 1.1em; color: #999">生活</a> <a href="/JlexZhong/jun.geovbox.com.git/tags/%E7%AE%97%E6%B3%95/" style="font-size: 1.1em; color: #999">算法</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/JlexZhong/jun.geovbox.com.git/archives/2021/09/"><span class="card-archive-list-date">九月 2021</span><span class="card-archive-list-count">7</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/JlexZhong/jun.geovbox.com.git/archives/2021/08/"><span class="card-archive-list-date">八月 2021</span><span class="card-archive-list-count">15</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">22</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2021-08-23T16:00:00.000Z"></div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">14.3k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2021-09-29T16:18:33.358Z"></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2021 By 钟军</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/JlexZhong/jun.geovbox.com.git/js/utils.js"></script><script src="/JlexZhong/jun.geovbox.com.git/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script src="/JlexZhong/jun.geovbox.com.git/js/search/local-search.js"></script><script>var preloader = {
-  endLoading: () => {
-    document.body.style.overflow = 'auto';
-    document.getElementById('loading-box').classList.add("loaded")
-  },
-  initLoading: () => {
-    document.body.style.overflow = '';
-    document.getElementById('loading-box').classList.remove("loaded")
+              <!-- 隐藏某个文章 -->
+            
+        </div>
+    </article>
 
-  }
-}
-window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>function subtitleType () {
-  getScript('https://sdk.jinrishici.com/v2/browser/jinrishici.js').then(() => {
-    jinrishici.load(function (result) {
-      if (true) {
-        var sub = "慢慢来，才是快,Slow is fast".length == 0 ? new Array() : "慢慢来，才是快,Slow is fast".split(',')
-        var content = result.data.content
-        var both = sub.unshift(content)
-        var typed = new Typed('#subtitle', {
-          strings: sub,
-          startDelay: 300,
-          typeSpeed: 150,
-          loop: true,
-          backSpeed: 50,
-        })
-      } else {
-        document.getElementById('subtitle').innerHTML = result.data.content
-      }
-    })
-  })
-}
+</main>
 
-if (true) {
-  if (typeof Typed === 'function') {
-    subtitleType()
-  } else {
-    getScript('https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js').then(subtitleType)
-  }
-} else {
-  subtitleType()
-}
-</script></div><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = [
-  'title',
-  '#config-diff',
-  '#body-wrap',
-  '#rightside-config-hide',
-  '#rightside-config-show',
-  '.js-pjax'
-]
 
-if (false) {
-  pjaxSelectors.unshift('meta[property="og:image"]', 'meta[property="og:title"]', 'meta[property="og:url"]')
-}
 
-var pjax = new Pjax({
-  elements: 'a:not([target="_blank"])',
-  selectors: pjaxSelectors,
-  cacheBust: false,
-  analytics: false,
-  scrollRestoration: false
-})
 
-document.addEventListener('pjax:send', function () {
-
-  // removeEventListener scroll 
-  window.removeEventListener('scroll', window.tocScrollFn)
-  window.removeEventListener('scroll', scrollCollect)
-
-  typeof preloader === 'object' && preloader.initLoading()
-  
-  if (window.aplayers) {
-    for (let i = 0; i < window.aplayers.length; i++) {
-      if (!window.aplayers[i].options.fixed) {
-        window.aplayers[i].destroy()
-      }
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/JlexZhong/jun.geovbox.com.git/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
     }
-  }
 
-  typeof typed === 'object' && typed.destroy()
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
 
-  //reset readmode
-  const $bodyClassList = document.body.classList
-  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
 
-})
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
 
-document.addEventListener('pjax:complete', function () {
-  window.refreshFn()
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
 
-  document.querySelectorAll('script[data-pjax]').forEach(item => {
-    const newScript = document.createElement('script')
-    const content = item.text || item.textContent || item.innerHTML || ""
-    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
-    newScript.appendChild(document.createTextNode(content))
-    item.parentNode.replaceChild(newScript, item)
-  })
+<script src="/JlexZhong/jun.geovbox.com.git/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
 
-  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+    
 
-  typeof chatBtnFn === 'function' && chatBtnFn()
-  typeof panguInit === 'function' && panguInit()
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2021</span>
+            
+            <span id="year">2021</span>
+            <a href="/JlexZhong/jun.geovbox.com.git/about" target="_blank">钟军</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                        class="white-color">14.3k</span>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
 
-  // google analytics
-  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+            <!-- 运行天数提醒. -->
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/JlexZhong" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
 
-  // baidu analytics
-  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
 
-  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
 
-  // Analytics
-  if (false) {
-    MtaH5.pgv()
-  }
+    <a href="mailto:junzhong0917@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
 
-  // prismjs
-  typeof Prism === 'object' && Prism.highlightAll()
 
-  typeof preloader === 'object' && preloader.endLoading()
-})
 
-document.addEventListener('pjax:error', (e) => {
-  if (e.request.status === 404) {
-    pjax.loadUrl('/404.html')
-  }
-})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2678091501" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 2678091501" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+    <a href="https://www.zhihu.com/people/jiang-lang-cai-jin-de-jiang-jin" class="tooltipped" target="_blank" data-tooltip="关注我的知乎: https://www.zhihu.com/people/jiang-lang-cai-jin-de-jiang-jin" data-position="top" data-delay="50">
+        <i class="fab fa-zhihu1">知</i>
+    </a>
+
+
+
+    <a href="/JlexZhong/jun.geovbox.com.git/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/JlexZhong/jun.geovbox.com.git/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/JlexZhong/jun.geovbox.com.git/libs/materialize/materialize.min.js"></script>
+    <script src="/JlexZhong/jun.geovbox.com.git/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/JlexZhong/jun.geovbox.com.git/libs/aos/aos.js"></script>
+    <script src="/JlexZhong/jun.geovbox.com.git/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/JlexZhong/jun.geovbox.com.git/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/JlexZhong/jun.geovbox.com.git/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/JlexZhong/jun.geovbox.com.git/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/JlexZhong/jun.geovbox.com.git/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="/JlexZhong/jun.geovbox.com.git/libs/instantpage/instantpage.js" type="module"></script>
+    
+    
+    <!--动态线条背景-->
+    <script type="text/javascript"
+    color="122 103 238" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+    </script>
+
+    <script type="text/javascript">
+    //只在桌面版网页启用特效
+    var windowWidth = $(window).width();
+    if (windowWidth > 768) {
+        document.write('<script type="text/javascript" src="/js/sakura.js"><\/script>');
+    }
+    </script>
+        
+
+</body>
+
+</html>
