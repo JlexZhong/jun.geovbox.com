@@ -4,6 +4,95 @@
   
     
     <entry>
+      <title>2021/9/28 课题组学习汇报（U-Net、U-Net++、BoundaryLoss）</title>
+      <link href="/2021/09/29/2021-09-28-zj-Research-group-report/"/>
+      <url>/2021/09/29/2021-09-28-zj-Research-group-report/</url>
+      
+        <content type="html"><![CDATA[<h1 id="2021-9-28-学习汇报总结"><a href="#2021-9-28-学习汇报总结" class="headerlink" title="2021/9/28 学习汇报总结"></a>2021/9/28 学习汇报总结</h1><h2 id="U-Net"><a href="#U-Net" class="headerlink" title="U-Net"></a>U-Net</h2><p><img src="https://img-blog.csdnimg.cn/20181127092719427.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zNzk3MzYxNA==,size_16,color_FFFFFF,t_70"></p><ul><li><p><strong>解决什么问题？</strong></p><ul><li>医学图像的分割</li><li>对小数据集十分友好</li></ul></li><li><p><strong>U-Net使用的方法？</strong></p><ul><li><p>整体结构就是<strong>先编码（下采样）， 再解码（上采样）</strong>，回归到跟原始图像一样大小的像素点的分类。</p></li><li><p>继承FCN的思想，继续进行改进。但是相对于FCN，有几个改变的地方，U-Net是完全对称的，且对解码器（应该自Hinton提出编码器、解码器的概念来，即将<strong>图像-&gt;高语义</strong>feature map的过程看成<strong>编码器</strong>，<strong>高语义-&gt;像素级别</strong>的分类score map的过程看作<strong>解码器</strong>）进行了加卷积加深处理，FCN只是单纯的进行了上采样。</p></li><li><p><strong>Skip connection</strong>：两者都用了这样的结构，虽然在现在看来这样的做法比较常见，但是对于当时，这样的结构所带来的明显好处是有目共睹的，因为可以<strong>联合高层语义和低层的细粒度表层信息</strong>，就很好的符合了分割对这两方面信息的需求。</p></li><li><p>联合：在FCN中，Skip connection的联合是通过对应像素的求和，而U-Net则是对其的channel的concat过程。</p></li></ul></li></ul><h3 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h3><ul><li><strong>CELoss + dice_loss</strong>，使用vgg16预训练权重；训练集：验证集 = 9：1；base_lr = 1e-4,StepLR学习率衰减器；batch_size = 2; epoch = 50。</li></ul><ul><li><strong>Boundary Loss + Dice Loss</strong>，权重衰减法，alpha from 1 =&gt; 0.01,使用vgg16预训练权重；训练集：验证集 = 9：1；base_lr = 1e-4,StepLR学习率衰减器；batch_size = 2; epoch = 50。</li></ul><img src="https://cdn.jsdelivr.net/gh/JlexZhong/J.CS-note@main/2021-09-28-zj-Research-group-report.assets/image-20210928193734174.png" alt="image-20210928193734174" style="zoom: 200%;"><p><img src="https://cdn.jsdelivr.net/gh/JlexZhong/J.CS-note@main/2021-09-28-zj-Research-group-report.assets/image-20210928194652121.png" alt="image-20210928194652121"></p><p><img src="https://cdn.jsdelivr.net/gh/JlexZhong/J.CS-note@main/2021-09-28-zj-Research-group-report.assets/image-20210928194734200.png" alt="image-20210928194734200"></p><h2 id="U-Net-1"><a href="#U-Net-1" class="headerlink" title="U-Net++"></a>U-Net++</h2><p><img src="https://img-blog.csdnimg.cn/20181127104355254.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zNzk3MzYxNA==,size_16,color_FFFFFF,t_70"></p><h3 id="效果-1"><a href="#效果-1" class="headerlink" title="效果"></a>效果</h3><p><img src="https://cdn.jsdelivr.net/gh/JlexZhong/J.CS-note@main/2021-09-28-zj-Research-group-report.assets/image-20210928194407791.png" alt="image-20210928194407791"></p><p><img src="https://cdn.jsdelivr.net/gh/JlexZhong/J.CS-note@main/2021-09-28-zj-Research-group-report.assets/image-20210928194521281.png" alt="image-20210928194521281"></p><p><img src="https://cdn.jsdelivr.net/gh/JlexZhong/J.CS-note@main/2021-09-28-zj-Research-group-report.assets/image-20210928194613551.png" alt="image-20210928194613551"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习汇报 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 深度学习 </tag>
+            
+            <tag> 学习汇报 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>基于U-Net语义分割神经网络对CT医学影像进行分割</title>
+      <link href="/2021/09/26/U-Net-pytorch-V1/"/>
+      <url>/2021/09/26/U-Net-pytorch-V1/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Unet：U-Net-Convolutional-Networks-for-Biomedical-Image-Segmentation语义分割模型在Pytorch当中的实现"><a href="#Unet：U-Net-Convolutional-Networks-for-Biomedical-Image-Segmentation语义分割模型在Pytorch当中的实现" class="headerlink" title="Unet：U-Net: Convolutional Networks for Biomedical Image Segmentation语义分割模型在Pytorch当中的实现"></a>Unet：U-Net: Convolutional Networks for Biomedical Image Segmentation语义分割模型在Pytorch当中的实现</h1><h2 id="性能情况"><a href="#性能情况" class="headerlink" title="性能情况"></a>性能情况</h2><p><strong>U-Net并不适合VOC此类数据集，其更适合特征少，需要浅层特征的医药数据集(CT-soil-rock-mixture)。</strong></p><table><thead><tr><th align="center">训练数据集</th><th align="center">测试数据集</th><th align="center">输入图片大小</th><th align="center">mIOU</th></tr></thead><tbody><tr><td align="center">VOC12+SBD</td><td align="center">VOC-Val12</td><td align="center">512x512</td><td align="center">55.11</td></tr><tr><td align="center"><strong>CT-soil-rock-mixture</strong></td><td align="center"><strong>CT-soil-rock-mixture</strong></td><td align="center">512x512</td><td align="center"><strong>92.01</strong></td></tr></tbody></table><h2 id="所需环境"><a href="#所需环境" class="headerlink" title="所需环境"></a>所需环境</h2><ul><li>scipy==1.2.1</li><li>numpy==1.17.0</li><li>matplotlib==3.1.2</li><li>opencv_python==4.1.2.30</li><li>torch==1.2.0</li><li>torchvision==0.4.0</li><li>tqdm==4.60.0</li><li>Pillow==8.2.0</li><li>h5py==2.10.0</li></ul><h2 id="目前效果展示"><a href="#目前效果展示" class="headerlink" title="目前效果展示"></a>目前效果展示</h2><p><strong>训练过程损失变化曲线图</strong>：</p><p><img src="https://cdn.jsdelivr.net/gh/JlexZhong/J.CS-note@main/U-Net-pytorch-V1.assets/epoch_loss_2021_09_17_11_22_21.png"></p><p><strong>训练数据集说明</strong>：</p><p>格式：VOC</p><p>由于数据集标注的困难，并且无法使用之前标注了部分的Mask R-CNN 实例分割数据集，本次仅使用30张语义分割图像，数据增强到100张进行训练，得到的效果较好。</p><p><img src="https://cdn.jsdelivr.net/gh/JlexZhong/J.CS-note@main/U-Net-pytorch-V1.assets/display_result.png"></p><p><img src="https://cdn.jsdelivr.net/gh/JlexZhong/J.CS-note@main/U-Net-pytorch-V1.assets/display_result_2.png"></p><p><img src="https://cdn.jsdelivr.net/gh/JlexZhong/J.CS-note@main/U-Net-pytorch-V1.assets/display_result_3.png"></p><p><img src="https://cdn.jsdelivr.net/gh/JlexZhong/J.CS-note@main/U-Net-pytorch-V1.assets/display_result_4.png"></p><p><img src="https://cdn.jsdelivr.net/gh/JlexZhong/J.CS-note@main/U-Net-pytorch-V1.assets/labels.png"></p><h2 id="U-Net"><a href="#U-Net" class="headerlink" title="U-Net"></a>U-Net</h2><p><img src="https://img-blog.csdnimg.cn/img_convert/f9d4d74fb52dd145e95f56a8a04cf265.png"></p><p>自2015年以来，在生物医学图像分割领域，U-Net得到了广泛的应用，目前已达到四千多次引用。</p><p>这个模型非常优雅，结构对称，全是卷积层，没有全连接。</p><p>因为这个网络使用更少的数据，取得更好的效果</p><p>所以我们修改并扩展这个网络。</p><p>全卷积网络其实就是一个不断缩小特征图的卷积神经网络，只不过后面的一些层中，将pooling层换为unsampling操作了。</p><p>为了使得分割结果更加精确，将高分辨率的特征图与与上采样后的低分辨率特征图进行合并。因此，分割结果就更加准确。</p><h2 id="CT数据集特点"><a href="#CT数据集特点" class="headerlink" title="CT数据集特点"></a>CT数据集特点</h2><ul><li>图像语义较为简单、结构较为固定。由于砾石结构固定和语义信息没有特别丰富，所以高级语义信息和低级特征都显得很重要。</li><li>数据量少。医学影像的数据获取相对难一些。所以我们设计的模型不宜多大，参数过多，很容易导致过拟合。</li></ul><h2 id="如何解决医学图像的数据非常少的问题？"><a href="#如何解决医学图像的数据非常少的问题？" class="headerlink" title="如何解决医学图像的数据非常少的问题？"></a><u>如何解决医学图像的数据非常少的问题？</u></h2><ul><li>所以需要使用大量的数据增强，意思是在不实质性的增加数据的情况下，让有限的数据产生等价于更多数据的价值。</li><li><strong>数据增强</strong>：几何变换、噪声、模糊、填充、亮度等等。</li></ul><h2 id="如何解决目标粘连问题？"><a href="#如何解决目标粘连问题？" class="headerlink" title="如何解决目标粘连问题？"></a><em><u>如何解决目标粘连问题？</u></em></h2><ul><li>图像形态学操作？开运算，凸性分析……</li><li>使用一个加权loss,使细胞之间的<strong>缝隙</strong>有较大的训练权重，是否可行？</li></ul><h2 id="如何训练数据集"><a href="#如何训练数据集" class="headerlink" title="如何训练数据集"></a>如何训练数据集</h2><ol><li>本文使用<code>VOC格式</code>进行训练。  </li><li>使用<code>lableme</code>制作自己的数据集，将图片和json文件放在<code>dataset/before</code>中，运行<code>json_to_dataset.py</code>。</li><li>训练前将标签文件放在<code>VOCdevkit</code>文件夹下的<code>VOC2007</code>文件夹下的<code>SegmentationClass</code>中。    </li><li>训练前将图片文件放在<code>VOCdevkit</code>文件夹下的<code>VOC2007</code>文件夹下的<code>JPEGImages</code>中。    </li><li>在训练前利用<code>voc2unet.py</code>文件生成对应的txt。</li><li>注意修改<code>train.py</code>的<code>num_classes</code>为分类个数+1。  </li><li>运行<code>train.py</code>即可开始训练。  </li></ol><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="https://github.com/bubbliiiing/unet-pytorch">https://github.com/bubbliiiing/unet-pytorch</a></p><p><a href="https://zhuanlan.zhihu.com/p/370931792">https://zhuanlan.zhihu.com/p/370931792</a></p><p><a href="https://lmb.informatik.uni-freiburg.de/people/ronneber/u-net/">https://lmb.informatik.uni-freiburg.de/people/ronneber/u-net/</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 语义分割 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 深度学习 </tag>
+            
+            <tag> Pytorch </tag>
+            
+            <tag> 语义分割 </tag>
+            
+            <tag> 医学影像 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Mask R-CNN for Object Detection and Segmentation</title>
+      <link href="/2021/09/20/Mask-R-CNN/"/>
+      <url>/2021/09/20/Mask-R-CNN/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Mask-R-CNN-for-Object-Detection-and-Segmentation"><a href="#Mask-R-CNN-for-Object-Detection-and-Segmentation" class="headerlink" title="Mask R-CNN for Object Detection and Segmentation"></a>Mask R-CNN for Object Detection and Segmentation</h1><p>基于深度神经网络<strong>Mask R-CNN</strong>，使用TensorFlow实现。</p><p>感谢何凯明等人完成的惊人成就，论文传送门：<a href="https://arxiv.org/abs/1703.06870">Mask R-CNN</a></p><h2 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h2><ul><li>balloon分割</li><li>矿物显微图像的实例分割</li><li><strong>基于CT扫描的土石混合体图像的精准分割</strong>（选择U-Net效果更好）</li></ul><h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><ul><li>tensorflow==1.15.0</li><li>numpy==1.17.4</li><li>scipy</li><li>pillow</li><li>cython</li><li>matplotlib</li><li>scikit-image==0.16.2</li><li>keras==2.1.5</li><li>opencv-python</li><li>h5py==2.10</li><li>imgaug</li><li>pyqt5</li><li>labelme</li><li>PyYAML</li><li>pycocotools</li></ul><h2 id="Mask-R-CNN-架构分解"><a href="#Mask-R-CNN-架构分解" class="headerlink" title="Mask R-CNN 架构分解"></a>Mask R-CNN 架构分解</h2><h3 id="整体网络结构"><a href="#整体网络结构" class="headerlink" title="整体网络结构"></a>整体网络结构</h3><p><img src="https://img-blog.csdnimg.cn/20191209203926693.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwOTg2NDg2,size_16,color_FFFFFF,t_70"></p><h3 id="主干特征提取网络"><a href="#主干特征提取网络" class="headerlink" title="主干特征提取网络"></a>主干特征提取网络</h3><p>主干网络是一个<strong>残差神经网络</strong>（ ResNet50 和 ResNet101），作为<strong>特征提取器</strong>。</p><p>ResNet101有两个基本的块，<strong>分别名为Conv Block和Identity Block，其中Conv Block输入和输出的维度是不一样的，所以不能连续串联，它的作用是改变网络的维度；Identity Block输入维度和输出维度相同，可以串联，用于加深网络的。</strong></p><ul><li><strong>Conv Block</strong>：</li></ul><p><img src="https://img-blog.csdnimg.cn/20191113094201415.png#pic_center"></p><ul><li><strong>Identity Block</strong>：</li></ul><p><img src="https://img-blog.csdnimg.cn/20191113094135752.png#pic_center"></p><h3 id="特征金字塔FPN"><a href="#特征金字塔FPN" class="headerlink" title="特征金字塔FPN"></a>特征金字塔FPN</h3><p>特征金字塔FPN的构建是为了实现特征<strong>多尺度的融合</strong>，可以在多个尺度上更好地表征目标。在Mask R-CNN当中，我们取出在主干特征提取网络中长宽压缩了两次C2、三次C3、四次C4、五次C5的结果来进行特征金字塔结构的构造。</p><p><img src="https://cdn.jsdelivr.net/gh/JlexZhong/J.CS-note@main/Mask-R-CNN.assets/1094671-20180613171722047-500887726.png"></p><h2 id="区域建议网络（RPN）"><a href="#区域建议网络（RPN）" class="headerlink" title="区域建议网络（RPN）"></a>区域建议网络（RPN）</h2><p><img src="https://cdn.jsdelivr.net/gh/JlexZhong/J.CS-note@main/Mask-R-CNN.assets/20180315152110758.jpeg"></p><p>RPN 是一个轻量的神经网络，它用滑动窗口来扫描图像，并寻找存在目标的区域。RPN 扫描的区域被称为 <strong>anchor</strong>。</p><p>RPN用于帮助网络推荐感兴趣的区域，也是Faster-RCNN中重要的一部分。</p><p><img src="https://cdn.jsdelivr.net/gh/JlexZhong/J.CS-note@main/Mask-R-CNN.assets/20180315144828151.png" alt="一个像素点的anchors"></p><h2 id="ROI-Align"><a href="#ROI-Align" class="headerlink" title="ROI  Align"></a>ROI  Align</h2><p>Mask-RCNN中提出了一个新的idea就是RoIAlign，其实RoIAlign就是在RoI pooling上稍微改动过来的，但是为什么在模型中不能使用RoI pooling呢？现在我们来直观的解释一下。</p><p><img src="https://cdn.jsdelivr.net/gh/JlexZhong/J.CS-note@main/Mask-R-CNN.assets/20180315155821363.png"></p><p>可以看出来在RoI pooling中出现了两次的取整，虽然在feature maps上取整看起来只是小数级别的数，但是当把feature map还原到原图上时就会出现很大的偏差，比如第一次的取整是舍去了0.78，还原到原图时是0.78*32=25,第一次取整就存在了25个像素点的偏差，在第二次的取整后的偏差更加的大。<strong>对于分类和物体检测来说可能这不是一个很大的误差，但是对于实例分割而言，这是一个非常大的偏差</strong>，因为mask出现没对齐的话在视觉上是很明显的。而RoIAlign的提出就是为了解决这个问题，解决对齐问题。</p><h2 id="Classifier"><a href="#Classifier" class="headerlink" title="Classifier"></a>Classifier</h2><p><img src="https://cdn.jsdelivr.net/gh/JlexZhong/J.CS-note@main/Mask-R-CNN.assets/classifier.jpg"></p><p><strong>Classifier分类网络</strong>就是对每一个ROI进行分类和回归（class + box），即完成<strong>图像分类</strong>和<strong>目标检测</strong></p><h2 id="Mask-Branch"><a href="#Mask-Branch" class="headerlink" title="Mask Branch"></a>Mask Branch</h2><p><img src="https://cdn.jsdelivr.net/gh/JlexZhong/J.CS-note@main/Mask-R-CNN.assets/FCN.jpg"></p><p><strong>掩码分支</strong>是一个卷积网络，取 ROI 分类器选择的正区域为输入，并生成它们的掩码。其生成的掩码是低分辨率的：28x28 像素。但它们是由浮点数表示的软掩码，相对于二进制掩码有更多的细节。掩码的小尺寸属性有助于保持掩码分支网络的轻量性。在训练过程中，我们将真实的掩码缩小为 28x28 来计算损失函数，在推断过程中，我们将预测的掩码放大为 ROI 边框的尺寸以给出最终的掩码结果，每个目标有一个掩码。</p><p><img src="https://cdn.jsdelivr.net/gh/JlexZhong/J.CS-note@main/Mask-R-CNN.assets/u=1609058238,2076054543&amp;fm=173&amp;app=25&amp;f=JPEG.jpeg"></p><p>注意这个是实现的语义分割而不是实例分割。因为每个ROI只对应一个物体，只需对其进行语义分割就好，相当于了实例分割了，这也是Mask-RCNN与其他分割框架的不同，是<strong>先分类再分割</strong>。</p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul><li><p><a href="https://github.com/matterport/Mask_RCNN">Mask R-CNN’s code and dataset</a></p></li><li><p><a href="https://github.com/JlexZhong/Ai-Learn/tree/master/%E7%89%A9%E4%BD%93%E6%A3%80%E6%B5%8B%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98MaskRcnn"> classes for Object Detection and Segmentation</a></p></li><li><p><a href="https://blog.csdn.net/remanented/article/details/79564045">Mask-RCNN 算法及其实现详解，写的很Nice</a></p></li><li><p><a href="https://blog.csdn.net/weixin_44791964/article/details/104629135">https://blog.csdn.net/weixin_44791964/article/details/104629135</a></p></li><li><p><a href="https://blog.csdn.net/qq_34713831/article/details/85123905">https://blog.csdn.net/qq_34713831/article/details/85123905</a></p></li><li><p><a href="https://www.sciencedirect.com/science/article/pii/S0266352X15002682">Li C.S., Zhang D.*, Du S.S., et al. Computed tomography based numerical simulation for triaxial test of soil–rock mixture. Computers and Geotechnics, 2016, 73: 179-188.</a></p></li><li><p><a href="http://t.cn/E6kqIsW">李长圣,张丹*,王宏宪,独莎莎. 基于CT扫描的土石混合体三维数值网格的建立. 岩土力学,2014,35(09):2731-2736.</a></p></li><li><p><a href="http://t.cn/E6kqz7M">李长圣. 含砾滑带土三轴剪切的精细数值模拟研究.硕士论文.南京大学,2014.</a></p></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 实例分割 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 深度学习 </tag>
+            
+            <tag> tensorflow </tag>
+            
+            <tag> Mask R-CNN </tag>
+            
+            <tag> 实例分割 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>(Mask R-CNN) AssertionError when I run inspect_model.py in run_graph()</title>
       <link href="/2021/09/17/(Mask-R-CNN)-AssertionError-in%20run_graph()/"/>
       <url>/2021/09/17/(Mask-R-CNN)-AssertionError-in%20run_graph()/</url>
@@ -82,9 +171,9 @@
       
         <tags>
             
-            <tag> BUG </tag>
-            
             <tag> Python </tag>
+            
+            <tag> BUG </tag>
             
         </tags>
       
